@@ -1,0 +1,10 @@
+.bgTrans{
+    background: transparent;
+    border: none;
+    display: block;
+}
+.toBottom{
+    margin-top: auto;
+    bottom: 0;
+    
+}

@@ -1,0 +1,15 @@
+.background{
+    background-image: url("../assets/Bg.jpg");
+    height: 100vh;
+    width: 100vw;
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position: center center;
+}
+.img{
+    width: 50%;
+    height: auto;
+    position: relative;
+    display: block;
+    margin-left: 25%;
+}
