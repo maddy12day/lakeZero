@@ -30,3 +30,13 @@
     font-size: 32px;
     color: aliceblue;
 }
+
+.BrandName{
+    width :auto;
+    height: 56px;
+}
+
+.BrandNameImg{
+    height: inherit;
+    width: auto;
+}

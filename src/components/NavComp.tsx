@@ -1,4 +1,3 @@
-import {Nav} from 'react-bootstrap'
 
 type navType = {
     navlinkName:string

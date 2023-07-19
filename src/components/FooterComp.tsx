@@ -1,10 +1,13 @@
-type footerType={
-    mediaUrl:string
+interface footerType{
+    mediaUrl:string;
+    className:string
 }
 
 
-export function FooterComp({mediaUrl}:footerType){
+export const SocialMedia =({mediaUrl ,className}:footerType) => {
     return<>
+    <div className={className}>
        <img src={mediaUrl}/>
+    </div>
     </>
 }

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import NavData from '../data/navData.json'
 import NavStyle from '../style/NavStyle.module.css'
 
@@ -5,11 +6,21 @@ export const Navbar = () => {
   return <>
     <div className={`${NavStyle.NavBar}`}>
       <div className={`${NavStyle.NavBarWrapper}`}>
+        <div className={`${NavStyle.BrandName}`}>
+          <img src="src/assets/WhiteTransp.png" alt="" className={`${NavStyle.BrandNameImg}`} />
+        </div>
         <div className={`${NavStyle.NavBarToggle}`}></div>
         <div className={`${NavStyle.NavBarCollapse}`}>
           {NavData.map(item => (
             <div className={`${NavStyle.NavItem}`}>
-              {item.navlinkName}
+              <Link to={`#${item.navlinkName}`}
+                key={item.navlinkName}
+                onClick={() =>
+                  document.getElementById(item.navlinkName)?.scrollIntoView({ behavior: 'smooth' })
+                }>
+                {item.navlinkName}
+
+              </Link>
             </div>
           ))}
         </div>

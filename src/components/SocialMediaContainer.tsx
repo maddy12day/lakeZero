@@ -1,13 +1,12 @@
-import {ListGroup} from 'react-bootstrap'
 import mediaIcon from '../data/socialMediaIcon.json'
-import { FooterComp } from './FooterComp'
-
+import { SocialMedia } from './FooterComp'
+import Styles from '../style/Styles.module.css'
 export const SocialMediaContainer = ()=> {
     return<>
-        <ListGroup horizontal className={`gap-5 justify-content-center`}>
+        <div className={`${Styles.SocialMediaContainer}`}>
            {mediaIcon.map(item=>(
-            <FooterComp{...item}/>
-           ))} 
-        </ListGroup>
+               <SocialMedia{...item} className={`${Styles.SocialMedia}`}/>
+               ))} 
+        </div>
     </>
 }

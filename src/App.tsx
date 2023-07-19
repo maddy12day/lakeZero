@@ -4,7 +4,6 @@ import { AboutPage } from "./pages/About"
 import { Contact } from "./pages/Contact"
 import { WorkPage } from "./pages/Work"
 import { Footer } from "./components/Footer"
-
 function App() {
 
   return (
