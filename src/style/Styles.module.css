@@ -3,6 +3,8 @@
     justify-content: space-between;
     width: fit-content;
     place-self: center;
+    position: absolute;
+    bottom: 0;
 }
 
 .SocialMedia{

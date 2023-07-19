@@ -1,4 +1,25 @@
 .Page{
     min-height:100vh;
-    background-color: #00ffef;
+    background-color: #245855;
+    position: relative;
+    overflow: hidden;
+}
+
+.Circle1{
+    height: 800px;
+    width:800px;
+    border-radius: 50%;
+    left:-40%;
+    top:-50%;
+    position: absolute;
+    background-color: rgb(49, 49, 111);
+}
+.Circle2{
+    height: 800px;
+    width:800px;
+    border-radius: 50%;
+    right:-40%;
+    bottom:-50%;
+    position: absolute;
+    background-color: rgb(49, 49, 111);
 }
