@@ -1,10 +1,6 @@
-.bgTrans{
-    background: transparent;
-    border: none;
-    display: block;
-}
-.toBottom{
-    margin-top: auto;
-    bottom: 0;
-    
+.Footer{
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+    padding: 6px;
 }

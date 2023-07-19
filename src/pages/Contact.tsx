@@ -1,5 +1,5 @@
-export function Contact(){
+export const Contact = ()=> {
     return<>
-        <section id="contact">he</section>
+        <section id="contact" className="">he</section>
     </>
 }

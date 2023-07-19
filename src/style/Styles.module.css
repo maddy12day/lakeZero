@@ -1,0 +1,10 @@
+.SocialMediaContainer{
+    display: flex;
+    justify-content: space-between;
+    width: fit-content;
+    place-self: center;
+}
+
+.SocialMedia{
+    margin: 6px
+}
