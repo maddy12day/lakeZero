@@ -1,17 +1,18 @@
 import { Navbar } from "../components/Navbar";
 import HomeStyle from '../style/Home.module.css'
-import { Footer } from "../components/Footer";
+import { SocialMediaContainer } from "../components/SocialMediaContainer";
+import { AboutPage } from "./About";
 
 
-export function Home(){
-    return<>
-    
+export function Home() {
+    return <>
+
         <div className={`${HomeStyle.background}`}>
-            <Navbar/>
+            <Navbar />
             <div>
                 <img src="src/assets/WhiteTransp.png" alt="" className={`${HomeStyle.img}`} />
             </div>
-            <Footer/>
+            <SocialMediaContainer />
         </div>
     </>
 }
