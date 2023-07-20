@@ -1,12 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne&display=swap');
 *,:root {
     box-sizing: border-box;
+    font-family: 'Syne', sans-serif;
 }
 
 body{
     margin: 0px;
 }
 
-a,a:visited{
+a{
     text-decoration: none;
-    color: aliceblue;
+}
+
+a:visited{
+    color: inherit;
 }

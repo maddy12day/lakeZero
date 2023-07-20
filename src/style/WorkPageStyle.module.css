@@ -1,4 +1,48 @@
 .Page{
     min-height:100vh;
-    background-color: #455655;
+    background-color: #005186;
+    display: flex;
+    justify-content: center;
+}
+.CardWrapper{
+    width: 606px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    padding: 16px;
+}
+.Card{
+    position: relative;
+    height: 350px;
+    width:275px;
+    border-radius: 16px;
+    overflow: hidden;
+}
+.Card:nth-child(2){
+    margin-top: 100px;
+}
+.Card:nth-child(3){
+    margin-top: -100px;
+}
+
+.Card:hover .CardTitle {
+    transition: all 0.3s ease-in;
+    font-size: 37px;
+}
+.CardImage{
+    height:inherit;
+    width: inherit;
+}
+.CardImage img{
+    width: 100%;
+}
+.CardTitle{
+    width: 100%;
+    transition: all 0.3s ease-in;
+    height: fit-content;
+    position: absolute;
+    bottom: 70px;
+    margin-left: 16px;
+    color: white;
+    font-size: 36px;
 }
