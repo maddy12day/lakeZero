@@ -18,13 +18,6 @@
     border-radius: 16px;
     overflow: hidden;
 }
-.Card:nth-child(2){
-    margin-top: 100px;
-}
-.Card:nth-child(3){
-    margin-top: -100px;
-}
-
 .Card:hover .CardTitle {
     transition: all 0.3s ease-in;
     font-size: 37px;
