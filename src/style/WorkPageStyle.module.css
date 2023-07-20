@@ -1,8 +1,9 @@
 .Page{
-    min-height:100vh;
     background-color: #005186;
     display: flex;
     justify-content: center;
+    height: 800px;
+    overflow: hidden;
 }
 .CardWrapper{
     width: 606px;
@@ -10,6 +11,8 @@
     flex-wrap: wrap;
     gap: 24px;
     padding: 16px;
+    height: max-content;
+    margin-top: -150px;
 }
 .Card{
     position: relative;
@@ -18,11 +21,14 @@
     border-radius: 16px;
     overflow: hidden;
 }
-.Card:nth-child(2){
-    margin-top: 100px;
+:root{
+    --card-offset:100px;
 }
-.Card:nth-child(3){
-    margin-top: -100px;
+.Card:nth-child(2){
+    margin-top: var(--card-offset);
+}
+.Card:nth-child(2n+3){
+    margin-top: calc( -1*var(--card-offset) );
 }
 
 .Card:hover .CardTitle {
