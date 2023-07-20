@@ -4,15 +4,18 @@ import { AboutPage } from "./pages/About"
 import { Contact } from "./pages/Contact"
 import { WorkPage } from "./pages/Work"
 import { Footer } from "./components/Footer"
+import { Navbar } from "./components/Navbar"
 function App() {
 
   return (
     <>
-      <Home/>
+      <Navbar />
+      <Home />
       <AboutPage />
       {/* <ContactPage/> */}
-      <WorkPage/>
-      <Footer/>
+      <WorkPage />
+      <Contact/>
+      <Footer />
     </>
   )
 }
