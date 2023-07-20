@@ -2,7 +2,6 @@
   width: 100vw;
   height: 100vh;
   color: #000000;
-
   position: relative;
   display: flex;
   align-items: center;
@@ -11,7 +10,7 @@
 
 .Wrapper{
   width: 100%;
-  height: fit-content;
+  height: 100vh;
 
   display: flex;
   align-items: center;
@@ -64,7 +63,7 @@
   justify-content: space-around;
   white-space: nowrap;
   width: 100%;
-  animation: scrollY 30s linear infinite;
+  animation: scrollY 40s linear infinite;
 }
 
 .MarqueeGroup2 {

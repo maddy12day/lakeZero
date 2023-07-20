@@ -1,8 +1,5 @@
 .Page{
-    min-height:100vh;
     background-color: #245855;
-    position: relative;
-    overflow: hidden;
 }
 
 .Circle1{

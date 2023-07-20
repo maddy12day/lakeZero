@@ -1,8 +1,12 @@
 .Page{
-    min-height:100vh;
-    background-color: #005186;
+    background-image: url('../assets/WORK_BG.png');
     display: flex;
     justify-content: center;
+    overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
 .CardWrapper{
     width: 606px;
@@ -10,13 +14,18 @@
     flex-wrap: wrap;
     gap: 24px;
     padding: 16px;
+    height: max-content;
+    margin-top: -150px;
 }
 .Card{
     position: relative;
-    height: 350px;
-    width:275px;
+    height:300px;
     border-radius: 16px;
-    overflow: hidden;
+    transform:scale(1.3);
+    transition: ease-in-out 0.2s;
+}
+.Card:hover{
+    transform:scale(1.4);
 }
 .Card:hover .CardTitle {
     transition: all 0.3s ease-in;
