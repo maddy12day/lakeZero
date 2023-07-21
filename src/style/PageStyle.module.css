@@ -1,5 +1,13 @@
 .Page{
-    padding: 0 15% ;
+    padding: 30px 15% ;
     overflow: hidden;
     position: relative;
+    height: max-content;
+    max-height: calc(100vh - 100px);
+}
+
+@media only screen and (min-height: 880px) {
+    .Page{
+        max-height: calc(100vh - 200px);
+    }
 }
