@@ -1,11 +1,60 @@
 .Page{
     background-image: url('../assets/WORK_BG.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+}
+.Text {
+    font-size: 35px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: #ffb5b5;
+    text-align: center;
+  }
+  
+  .Note {
+    font-size: 18px;
+    font-weight: 200;
+    margin-bottom: 40px;
+    color: #7c8e9a;
+    text-align: center;
+  }
+.Container{
     display: flex;
     justify-content: center;
     overflow: hidden;
-    background-size: cover;
-    background-repeat: no-repeat;
     padding-top: 40px;
     padding-bottom: 40px;
-    gap:20px;
+    gap:10px;
+}
+
+.Container{
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    gap:10px;
+}
+.CardWrapper{
+    border-radius: 16px;
+    height: 400px;
+    aspect-ratio: 3/4;
+    background: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.Card{
+    height: 100%;
+    width: 100%;
+    padding:16px 20px;
+    position: relative;
+}
+.CardBackground{
+    position: absolute;
+    background-color: rgb(224, 213, 213);
+    height: 100%;
+    width:100%;
 }
