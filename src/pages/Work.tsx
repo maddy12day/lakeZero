@@ -1,41 +1,15 @@
 import WorkPageStyle from '../style/WorkPageStyle.module.css'
-export const WorkPage = ()=> {
+import { RotatingCarousel } from '../components/RotatingCarousel'
+import PageStyle from '../style/PageStyle.module.css'
+export const WorkPage = () => {
     return <>
-        <div className={`${WorkPageStyle.Page}`} id='WORK'>
-            <div className={`${WorkPageStyle.CardWrapper}`}>
-            <div className={`${WorkPageStyle.Card}`}>
-                <div className={`${WorkPageStyle.CardImage}`}>
-                    <img src='src/assets/20220213_041556.jpg'/>
-                </div>
-                <span className={`${WorkPageStyle.CardTitle}`}>
-                    Abraca Dabra
-                </span>
+        <div className={`${PageStyle.Page} ${WorkPageStyle.Page}`} id='WORK'>
+            <div className={`${WorkPageStyle.Text}`}>Works that will roll your mind</div>
+            <div className={`${WorkPageStyle.Container}`}>
+                <RotatingCarousel reverse={true} speed={3} />
+                <RotatingCarousel speed={4} />
+                <RotatingCarousel reverse={true} speed={1} />
             </div>
-            <div className={`${WorkPageStyle.Card}`}>
-                <div className={`${WorkPageStyle.CardImage}`}>
-                    <img src='src/assets/20220213_041556.jpg'/>
-                </div>
-                <span className={`${WorkPageStyle.CardTitle}`}>
-                    Abraca Dabra
-                </span>
-            </div> 
-            <div className={`${WorkPageStyle.Card}`}>
-                <div className={`${WorkPageStyle.CardImage}`}>
-                    <img src='src/assets/20220213_041556.jpg'/>
-                </div>
-                <span className={`${WorkPageStyle.CardTitle}`}>
-                    Abraca Dabra
-                </span>
-            </div> 
-            <div className={`${WorkPageStyle.Card}`}>
-                <div className={`${WorkPageStyle.CardImage}`}>
-                    <img src='src/assets/20220213_041556.jpg'/>
-                </div>
-                <span className={`${WorkPageStyle.CardTitle}`}>
-                    Abraca Dabra
-                </span>
-            </div> 
-            </div>
-        </div>    
+        </div>
     </>
 }

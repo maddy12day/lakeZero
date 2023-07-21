@@ -1,4 +1,136 @@
 .Page{
-    min-height:100vh;
     background-color: #455655;
+}
+.ContactInfoContainer{
+    height: 100%;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    display: grid;
+    place-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.flexRow{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    place-items: center;
+}
+.flexColumn{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    place-items: center;
+}
+
+.gridCenter{
+    display: grid;
+    place-items: center;
+    margin-left:auto ;
+    margin-right:auto;
+}
+
+.Section{
+    min-height: 100vh;
+    width: 100%;
+    height: fit-content;
+    scroll-behavior: smooth;
+}
+
+/* Contact me form  */
+.Form {
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+    box-shadow: 20px 20px 60px #bebebe,
+        -20px -20px 60px #ffffff;
+
+    border-radius: 1rem;
+    padding: 1rem;
+    color: black;
+    margin: 1rem;
+    grid-gap: 0.4rem;
+}
+
+::placeholder {
+    color: black;
+}
+label{
+    margin:0.8rem;
+    font-size: 20px;
+}
+.Form input,
+textarea,
+button,
+.Name>input {
+    margin: 0.8rem;
+    padding: 0.25rem;
+    border-radius: 0.3rem 0.3rem 0 0;
+    height: 80%;
+    background: inherit;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 50;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    border-bottom: 2px solid rgb(218, 56, 56);
+}
+
+.Form input:focus,
+textarea:focus {
+    border-top: 2px solid var(--green);
+    border-left: 2px solid var(--green);
+    border-right: 2px solid var(--green);
+    box-shadow: 6px 6px 12px #bebebe,
+        -6px -6px 12px #ffffff;
+    transition: all ease-in 0.2s;
+}
+
+.Name {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+button {
+    border: 0;
+    height: 2rem;
+    place-self: center;
+    box-shadow: 6px 6px 12px #bebebe,
+        -6px -6px 12px #ffffff;
+}
+
+
+.SocialMedia {
+    width: 100%;
+    height: fit-content;
+    background-color: aqua;
+}
+
+.SocialMedia.flexRow {
+    justify-content: space-between;
+}
+
+.ContactInfo {
+    height: 100%;
+    width: max-content;
+    place-self: start;
+}
+.ContactInfo div{
+  width: auto;
+}
+
+
+.Media{
+  display: grid;
+  place-items: center;
+    height: 2.5rem;
+    width: 2.5rem;
+    font-size: 2rem;
+    margin: 4px;
+    padding: 4px;
+    border-radius: 0.2rem;
+    background-color: #e3ebf0;
+    box-shadow: 6px 6px 12px #bebebe,
+        -6px -6px 12px #ffffff;
+    outline: none;
 }
