@@ -5,6 +5,7 @@ import { Contact } from "./pages/Contact"
 import { WorkPage } from "./pages/Work"
 import { Footer } from "./components/Footer"
 import { Navbar } from "./components/Navbar"
+import { ServicesPage } from "./pages/Services"
 function App() {
 
   return (
@@ -13,6 +14,7 @@ function App() {
       <Home />
       <AboutPage />
       {/* <ContactPage/> */}
+      <ServicesPage/>
       <WorkPage />
       <Contact/>
       <Footer />
