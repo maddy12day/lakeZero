@@ -1,6 +1,5 @@
 import Styles from '../style/RotatingCarousel.module.css'
-import WorkPageStyle from '../style/WorkPageStyle.module.css'
-export const RotatingCarousel = ({ reverse = false }) => {
+export const RotatingCarousel = ({ reverse = false, speed = 2 }) => {
     const row1 = [
         "https://youtube.com/watch?v=3_DJLe54t2c",
         "https://youtube.com/watch?v=T5drLlke8Sg",
@@ -19,35 +18,35 @@ export const RotatingCarousel = ({ reverse = false }) => {
         <div className={`${Styles.AppContainer}`}>
             <div className={`${Styles.Wrapper}`}>
                 <div className={`${Styles.Marquee}`}>
-                    <div className={`${reverse ? Styles.MarqueeGroup2 : Styles.MarqueeGroup}`}>
+                    <div className={`${reverse ? Styles.MarqueeReverse : Styles.MarqueeGroup} ${Styles['MarqueeSpeed_'+speed]}`}>
                         {row1.map((el) => (
-                            <a href={el}>
-                                <div className={`${WorkPageStyle.Card} ${WorkPageStyle.ImageGroup}`}>
-                                    <div className={`${WorkPageStyle.CardImage}`}>
+                            <a href={el} target='_blank'>
+                                <div className={`${Styles.Card} ${Styles.ImageGroup}`}>
+                                    <div className={`${Styles.CardImage}`}>
                                         <img className={`${Styles.Image}`} src={getVideoThumbnail(el)} />
                                     </div>
-                                    {/* <span className={`${WorkPageStyle.CardTitle}`}>
+                                    {/* <span className={`${Styles.CardTitle}`}>
                                         Abraca Dabra
                                     </span> */}
                                 </div>
                             </a>
                         ))}
                     </div>
-                    <div className={`${reverse ? Styles.MarqueeGroup2 : Styles.MarqueeGroup}`}>
+                    <div className={`${reverse ? Styles.MarqueeReverse : Styles.MarqueeGroup} ${Styles['MarqueeSpeed_'+speed]}`}>
                         {row1.map((el) => (
-                            <a href={el}>
-                                <div className={`${WorkPageStyle.Card} ${WorkPageStyle.ImageGroup}`}>
-                                    <div className={`${WorkPageStyle.CardImage}`}>
+                            <a href={el} target='_blank'>
+                                <div className={`${Styles.Card} ${Styles.ImageGroup}`}>
+                                    <div className={`${Styles.CardImage}`}>
                                         <img className={`${Styles.Image}`} src={getVideoThumbnail(el)} />
                                     </div>
-                                    {/* <span className={`${WorkPageStyle.CardTitle}`}>
+                                    {/* <span className={`${Styles.CardTitle}`}>
                                         Abraca Dabra
                                     </span> */}
                                 </div>
                             </a>
                         ))}
                     </div>
-                </div>
+                    </div>
             </div>
         </div>
     );

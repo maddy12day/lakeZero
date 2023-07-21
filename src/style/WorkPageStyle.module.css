@@ -7,44 +7,5 @@
     background-repeat: no-repeat;
     padding-top: 40px;
     padding-bottom: 40px;
-}
-.CardWrapper{
-    width: 606px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 24px;
-    padding: 16px;
-    height: max-content;
-    margin-top: -150px;
-}
-.Card{
-    position: relative;
-    height:300px;
-    border-radius: 16px;
-    transform:scale(1.3);
-    transition: ease-in-out 0.2s;
-}
-.Card:hover{
-    transform:scale(1.4);
-}
-.Card:hover .CardTitle {
-    transition: all 0.3s ease-in;
-    font-size: 37px;
-}
-.CardImage{
-    height:inherit;
-    width: inherit;
-}
-.CardImage img{
-    width: 100%;
-}
-.CardTitle{
-    width: 100%;
-    transition: all 0.3s ease-in;
-    height: fit-content;
-    position: absolute;
-    bottom: 70px;
-    margin-left: 16px;
-    color: white;
-    font-size: 36px;
+    gap:20px;
 }

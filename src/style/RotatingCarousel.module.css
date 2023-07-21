@@ -1,6 +1,5 @@
 .AppContainer{
-  width: 100vw;
-  height: 100vh;
+  height: 80vh;
   color: #000000;
   position: relative;
   display: flex;
@@ -10,12 +9,12 @@
 
 .Wrapper{
   width: 100%;
-  height: 100vh;
-
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  -webkit-mask-image: linear-gradient(rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 20%, rgb(0, 0, 0) 80%, rgba(0, 0, 0, 0) 100%);
 }
 
 .Text {
@@ -37,13 +36,8 @@
   overflow: hidden;
   user-select: none;
     flex-direction: column;
-  mask-image: linear-gradient(
-    to right,
-    hsl(0 0% 0% / 0),
-    hsl(0 0% 0% / 1) 10%,
-    hsl(0 0% 0% / 1) 90%,
-    hsl(0 0% 0% / 0)
-  );
+    width: 200px;
+    --webkit-mask-image: linear-gradient(rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 20%, rgb(0, 0, 0) 80%, rgba(0, 0, 0, 0) 100%);
 }
 
 @keyframes scrollY{
@@ -55,7 +49,7 @@
   }
 }
 
-.MarqueeGroup, .MarqueeGroup2{
+.MarqueeGroup, .MarqueeReverse{
   flex-shrink: 0;
   display: flex;
   align-items: center;
@@ -64,18 +58,33 @@
   white-space: nowrap;
   width: 100%;
   animation: scrollY 40s linear infinite;
+  animation-delay: -5s;
 }
 
-.MarqueeGroup2 {
+.MarqueeReverse {
   animation-direction: reverse;
-  animation-delay: -3s;
+}
+
+.MarqueeSpeed_1{
+    animation-duration: 70s;
+}
+.MarqueeSpeed_2{
+    animation-duration: 50s;
+}
+.MarqueeSpeed_3{
+    animation-duration: 30s;
+}
+.MarqueeSpeed_4{
+    animation-duration: 20s;
+}
+.MarqueeSpeed_5{
+    animation-duration: 10s;
 }
 
 .ImageGroup {
   display: grid;
   place-items: center;
-  width: clamp(10rem, 1rem + 40vmin, 30rem);
-  padding: calc(clamp(10rem, 1rem + 30vmin, 30rem) / 10);
+  width: clamp(10rem, 1rem + 27vmin, 30rem);
 }
 
 .Image{
@@ -84,7 +93,33 @@
   height: 100%;
   /* border: 1px solid black; */
   border-radius: 0.5rem;
-  aspect-ratio: 16/9;
-  padding: 5px 20px;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  /* aspect-ratio: 16/9; */
+  /* padding: 5px 20px;  */
+}
+
+.Card{
+    position: relative;
+    border-radius: 24px;
+    transition: ease-in-out 0.2s;
+    margin: 5px 0;
+}
+.CardImage{
+
+}
+.Card:hover{
+    transform:scale(1.1);
+}
+.Card:hover .CardTitle {
+    transition: all 0.3s ease-in;
+    font-size: 37px;
+}
+.CardTitle{
+    width: 100%;
+    transition: all 0.3s ease-in;
+    height: fit-content;
+    position: absolute;
+    bottom: 70px;
+    margin-left: 16px;
+    color: white;
+    font-size: 36px;
 }

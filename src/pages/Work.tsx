@@ -5,9 +5,9 @@ export const WorkPage = () => {
     return <>
         <div className={`${PageStyle.Page} ${WorkPageStyle.Page}`} id='WORK'>
         
-            <RotatingCarousel />
-            <RotatingCarousel reverse={true} />
-            <RotatingCarousel />
+            <RotatingCarousel reverse={true} speed={3}/>
+            <RotatingCarousel  speed={4}/>
+            <RotatingCarousel reverse={true} speed={1}/>
         </div>
     </>
 }
