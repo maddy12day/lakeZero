@@ -40,6 +40,10 @@ export const WorkPage = () => {
                     </div>
                 </div>
             </div>
+            <br/>
+            <br/>
+            <br/>
+            <div className={`${WorkPageStyle.Text}`}>Works that will roll your mind</div>
             <div className={`${WorkPageStyle.Container}`}>
                 <RotatingCarousel reverse={true} speed={3} />
                 <RotatingCarousel speed={4} />
