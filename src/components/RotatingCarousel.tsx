@@ -6,7 +6,7 @@ export const RotatingCarousel = ({ reverse = false, speed = 2 }) => {
         "https://youtube.com/watch?v=w8CWyaWHSog",
         "https://youtube.com/watch?v=3aiwr_NCgn0",
         "https://youtube.com/watch?v=w8CWyaWHSog",
-        "https://youtube.com/watch?v=FbrnNh_MocI"
+    "https://youtube.com/watch?v=FbrnNh_MocI"
     ];
 
     const getVideoThumbnail = (youtubeURL: string) => {

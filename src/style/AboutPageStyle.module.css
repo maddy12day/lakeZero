@@ -2,49 +2,59 @@
 
 .Page{
     display: flex;
-    justify-content: space-around;
-    height: 100vh;
-    background-color: #245855;
+    justify-content: center;
 }
 
-.leftSide{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    width: 550px;
-    
+.LeftSide{
+    /* min-width: 50%; */
+    width: 55%;
 }
-.heading h1{
+.heading {
     font-weight: 900;
-    font-family: 'Lugrasimo', cursive;;
     font-size: 80px;
-    color: rgb(255, 255, 255);
-}
-.points{ 
-    width: 550px;
+    text-align: left;
 }
 .points p{
-    font-family: 'Nunito Sans', sans-serif;
     background-color: transparent;
-    color: rgb(152, 139, 139);
     font-weight: 900;
-    font-size: 17px;
+    text-align: justify;
     padding: 6px;
+    margin-bottom: 2px;
+    overflow-wrap: break-word;
 }
-.rightSide{
-    background-image: url("../assets/About.jpg");
-    height: 90vh;
-    width: 40%;
-    margin-top: 45px;
-    background-size:cover;
-    background-repeat:no-repeat;
-    background-position: center center;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
+.RightSide{
+    width: 400px ;
+    place-items: end;
 }
-.nameStyle{
-    background-color: black;
-    color: white;
-    font-family: 'Nunito Sans', sans-serif;
+
+.Card{
+    height: 50vmin;
+    width: auto;
+    aspect-ratio: 1;
+    border-radius: 16px;
+    background-color: aliceblue;
+    position: relative;
+    overflow: hidden;
+}
+.CardBackground{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+.CardWrapper{
+    padding:14px;
+    width:max-content;
+    position: absolute;
+    text-align: center;
+    inset: auto 0px 10px 0px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba(255, 255, 255, 0.45);
+    border-radius: 8px;
+}
+
+@media only screen and (min-width:768px){
+    .Card{
+        height: 50%;
+    }
 }
