@@ -13,7 +13,7 @@
 .ContainerColFlex{
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   overflow: hidden;
   gap:10px;
 }

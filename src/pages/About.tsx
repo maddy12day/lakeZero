@@ -30,9 +30,11 @@ export const AboutPage = () => {
                         <img src='/src/assets/About.jpg'/>
                     </div>
                     <div className={`${AboutPageStyle.CardWrapper}`}>
+                    <div className={`${AboutPageStyle.Data}`}>
                         <span className={`${PageStyle.nameStyle}`}>SUKRIT SHRIVASTAV</span>
                         <hr/>
                         <span>Composer | Music Producer</span>
+                        </div>
                     </div>
                 </div>
                 <div className={`${AboutPageStyle.Card}`}>
@@ -40,12 +42,17 @@ export const AboutPage = () => {
                         <img src='src/assets/about.jpg'/>
                     </div>
                     <div className={`${AboutPageStyle.CardWrapper}`}>
+                        <div className={`${AboutPageStyle.Data}`}>
+
                         <span className={`${AboutPageStyle.nameStyle}`}>ANIMESH SHUKLA</span>
                         <hr/>
                         <span>Music Producer | Guitarist</span>
+                        </div>
                     </div>
                 </div>
             </div>
+            {/* <div className={`${AboutPageStyle.Circle1}`}></div> */}
+            {/* <div className={`${AboutPageStyle.Circle2}`}></div> */}
         </div>
     </>
 }

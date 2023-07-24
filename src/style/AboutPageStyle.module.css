@@ -28,7 +28,7 @@
 }
 
 .Card{
-    height: 50vmin;
+    height: 40%;
     width: auto;
     aspect-ratio: 1;
     border-radius: 16px;
@@ -41,7 +41,18 @@
     height: 100%;
     width: 100%;
 }
+.CardBackground img{
+    height: inherit;
+    width: inherit;
+}
 .CardWrapper{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    transition: ease-in 0.2s;
+}
+
+.Data{
     padding:14px;
     width:max-content;
     position: absolute;
@@ -49,12 +60,38 @@
     inset: auto 0px 10px 0px;
     margin-left: auto;
     margin-right: auto;
-    background-color: rgba(255, 255, 255, 0.45);
+    background-color: #ffb5b58b;
     border-radius: 8px;
+    transition: ease-in 0.2s;
+}
+.Card:hover .Data{
+    background-color: #ffb5b5;
+}
+.Card:hover .CardWrapper{
+    background-color: rgba(255, 255, 255, 0.511);
 }
 
-@media only screen and (min-width:768px){
+@media only screen and (max-width:821px){
     .Card{
-        height: 50%;
+        height: 40%;
     }
 }
+
+.Circle1, .Circle2{
+    height: 100vmax;
+    width: 100vmax;
+    position: absolute;
+    background-color: #a29ac1;
+    border-radius: 50%;
+    left: -32vmax;
+    top: -40vmax;
+    z-index: -1;
+}
+.Circle2{
+    right:-10%;
+    bottom:-20%;
+    left:auto;
+    top:auto;
+}
+
+
