@@ -7,10 +7,10 @@ interface dataType{
 export const RotatingCarousel = ({ reverse = false, speed = 2, data=[{imageUrl:'',url:''}] }) => {
 
     return (
-        <div className={`${Styles.AppContainer}`}>
-            <div className={`${Styles.Wrapper}`}>
-                <div className={`${Styles.Marquee}`}>
-                    <div className={`${reverse ? Styles.MarqueeReverse : Styles.MarqueeGroup} ${Styles['MarqueeSpeed_'+speed]}`}>
+        <div className={`${Styles.CarouselContainer}`}>
+            <div className={`${Styles.CarouselWrapper}`}>
+                <div className={`${Styles.Carousel}`}>
+                    <div className={`${reverse ? Styles.CarouselMarqueeReverse : Styles.CarouselMarquee} ${Styles['MarqueeSpeed_'+speed]}`}>
                         {data.map((el) => (
                             <a href={el.url} target='_blank'>
                                 <div className={`${Styles.Card} ${Styles.ImageGroup}`}>
@@ -24,7 +24,7 @@ export const RotatingCarousel = ({ reverse = false, speed = 2, data=[{imageUrl:'
                             </a>
                         ))}
                     </div>
-                    <div className={`${reverse ? Styles.MarqueeReverse : Styles.MarqueeGroup} ${Styles['MarqueeSpeed_'+speed]}`}>
+                    <div className={`${reverse ? Styles.CarouselMarqueeReverse : Styles.CarouselMarquee} ${Styles['MarqueeSpeed_'+speed]}`}>
                         {data.map((el) => (
                             <a href={el.url} target='_blank'>
                                 <div className={`${Styles.Card} ${Styles.ImageGroup}`}>
