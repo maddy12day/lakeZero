@@ -12,6 +12,14 @@ a{
     text-decoration: none;
 }
 
+hr{
+    height: 1px;
+    background: black;
+    color: black;
+    border-radius: 1px;
+    border: none;
+}
+
 a:visited{
     color: inherit;
 }

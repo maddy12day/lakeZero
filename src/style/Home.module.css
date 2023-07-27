@@ -16,7 +16,8 @@
     width: 100%;
 }
 .img{
-    width: 70%;
+    width: 50%;
+    margin-bottom: 8%;
     height: auto;
     position: relative;
     display: block;

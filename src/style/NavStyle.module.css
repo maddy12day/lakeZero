@@ -12,28 +12,11 @@
     font-family: 'Montserrat', sans-serif;
     position: absolute;
     z-index: 1;
-}
-.NavBarCollapse{
     transition: all 0.1s ease-in-out;
 }
 
 .someClass{
     position: relative;
-}
-.NavBarCollapseGlassMorphism{
-    backdrop-filter: blur(16px) saturate(180%);
-    -webkit-backdrop-filter: blur(16px) saturate(180%);
-    background-color: rgba(37, 52, 79, 0.5);
-    border: 1px solid rgba(255, 255, 255, 0.125);
-    transition: all 0.1s ease-in-out;
-}
-.NavBarCollapse .NavBarWrapper{
-    justify-content: start;
-    flex-direction: column;
-}
-.NavBarCollapse .NavBarWrapper .NavBarToggle{
-    display: flex;
-    place-self: end;
 }
 .NavBarWrapper{
     display: flex;
@@ -46,17 +29,6 @@
     flex-direction: row;
     gap:10px;
     justify-content: space-between;
-}
-
-.NavBarCollapseMenu{
-    display: flex;
-    flex-direction: column;
-    gap:10px;
-    justify-content: space-between;
-}
-
-.NavBarHidden{
-    display: none;
 }
 
 .NavItem{
@@ -87,5 +59,38 @@
     background-image: url('../assets/icons8-guitar-80.png');
     background-size: contain;
     padding: 4px;
-    background-color: red;
+    background-color: cyan;
+    display: none;
+}
+
+@media only screen and (max-width:768px){
+    .NavBar{
+        height: 100%;
+        position: absolute;
+    }
+    .NavBarCollapseGlassMorphism{
+        backdrop-filter: blur(16px) saturate(180%);
+        -webkit-backdrop-filter: blur(16px) saturate(180%);
+        background-color: rgba(37, 52, 79, 0.5);
+        border: 1px solid rgba(255, 255, 255, 0.125);
+        transition: all 0.1s ease-in-out;
+    }
+    .NavBar .NavBarWrapper{
+        justify-content: start;
+        flex-direction: column;
+    }
+    .NavBar .NavBarWrapper .NavBarToggle{
+        display: flex;
+        place-self: end;
+    }
+    .NavBarMenu {
+        display: none;
+        flex-direction: column;
+    }
+    .NavBarToggle{
+        display: block;
+    }
+    .NavBarVisible{
+        display: flex;
+    }
 }
