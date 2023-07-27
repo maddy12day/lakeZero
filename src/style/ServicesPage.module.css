@@ -5,10 +5,47 @@
     display: flex;
     flex-direction: column;
 }
+.CarouselContainer{
+    color: #000000;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  
+.CarouselWrapper{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    -webkit-mask-image: linear-gradient(rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 20%, rgb(0, 0, 0) 80%, rgba(0, 0, 0, 0) 100%);
+  }
+  
+  
+.Carousel {
+    display: flex;
+    overflow: hidden;
+    user-select: none;
+      width: 100%;
+      --webkit-mask-image: linear-gradient(rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 20%, rgb(0, 0, 0) 80%, rgba(0, 0, 0, 0) 100%);
+  }
+  
+  
+.CardContainer{
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    white-space: nowrap;
+    animation-delay: -5s;
+    gap: 10px;
+  }
+
 .CardWrapper{
     border-radius: 16px;
-    height: 400px;
-    aspect-ratio: 3/4;
+    width: 250px;
+    aspect-ratio: 4/4;
     background: white;
     position: relative;
     overflow: hidden;
@@ -26,7 +63,10 @@
     height: 100%;
     width:100%;
 }
-
+.Container{
+    height: auto;
+    overflow: hidden;
+}
 @media only screen and (max-width:768px) {
     .Container{
         flex-direction: column;
