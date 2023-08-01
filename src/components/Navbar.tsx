@@ -4,23 +4,15 @@ import NavData from '../data/navData.json'
 import { useEffect, useState } from 'react'
 
 export const Navbar = () => {
-  const [toggleVisible, setToggle] = useState(false)
   const [isNavCollapsed, setNavCollapsed] = useState(false)
-
-  useEffect(() => {
-    if (window.outerWidth <= 780) {
-      setToggle(true)
-    }
-    console.log(window.outerWidth)
-  }, [toggleVisible, window.outerWidth])
   return <>
-    <div className={`${NavStyle.NavBar} ${toggleVisible ? NavStyle.NavBarCollapse : ''} ${isNavCollapsed ? NavStyle.NavBarCollapseGlassMorphism : ''}`}>
+    <div className={`${NavStyle.NavBar} ${isNavCollapsed ? NavStyle.NavBarCollapseGlassMorphism : ''}`}>
 
       <div className={`${NavStyle.NavBarWrapper}`}>
-        <div className={`${toggleVisible ? NavStyle.NavBarToggle : ''}`} onClick={() => setNavCollapsed(!isNavCollapsed)}></div>
+        <div className={`${NavStyle.NavBarToggle}`} onClick={() => setNavCollapsed(!isNavCollapsed)}></div>
 
 
-          <div className={`${!toggleVisible ? NavStyle.NavBarMenu : isNavCollapsed ? NavStyle.NavBarCollapseMenu : NavStyle.NavBarHidden}`}>
+          <div className={`${NavStyle.NavBarMenu} ${isNavCollapsed ? NavStyle.NavBarVisible : ''}`}>
             {NavData.map(item => (
               <div className={`${NavStyle.NavItem}`}>
                 <Link to={`#${item.navlinkName}`}

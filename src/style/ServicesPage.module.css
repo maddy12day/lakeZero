@@ -5,31 +5,47 @@
     display: flex;
     flex-direction: column;
 }
-.Text {
-    font-size: 35px;
-    font-weight: 500;
-    margin-bottom: 10px;
-    color: #ffb5b5;
-    text-align: center;
+.CarouselContainer{
+    color: #000000;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
   }
   
-  .Note {
-    font-size: 18px;
-    font-weight: 200;
-    margin-bottom: 40px;
-    color: #7c8e9a;
-    text-align: center;
-  }
-.Container{
+.CarouselWrapper{
+    width: 100%;
+    height: 100%;
     display: flex;
-    justify-content: center;
+    align-items: center;
+    -webkit-mask-image: linear-gradient(rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 20%, rgb(0, 0, 0) 80%, rgba(0, 0, 0, 0) 100%);
+  }
+  
+  
+.Carousel {
+    display: flex;
     overflow: hidden;
-    gap:10px;
-}
+    user-select: none;
+      width: 100%;
+      --webkit-mask-image: linear-gradient(rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 20%, rgb(0, 0, 0) 80%, rgba(0, 0, 0, 0) 100%);
+  }
+  
+  
+.CardContainer{
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    white-space: nowrap;
+    animation-delay: -5s;
+    gap: 10px;
+  }
+
 .CardWrapper{
     border-radius: 16px;
-    height: 400px;
-    aspect-ratio: 3/4;
+    width: 250px;
+    aspect-ratio: 4/4;
     background: white;
     position: relative;
     overflow: hidden;
@@ -46,4 +62,18 @@
     background-color: rgb(224, 213, 213);
     height: 100%;
     width:100%;
+}
+.Container{
+    height: auto;
+    overflow: hidden;
+}
+@media only screen and (max-width:768px) {
+    .Container{
+        flex-direction: column;
+    }
+    .CardWrapper{
+        width:100%;
+        height: auto;
+        aspect-ratio: 4/3;
+    }
 }

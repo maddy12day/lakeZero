@@ -1,13 +1,47 @@
 .Page{
-    padding: 30px 15% ;
+    padding: 30px 120px ;
     overflow: hidden;
     position: relative;
     height: max-content;
-    max-height: calc(100vh - 100px);
 }
-
+.Container{
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  gap:10px;
+}
+.ContainerColFlex{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  gap:10px;
+}
+.Text {
+    font-size: 35px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: #ffb5b5;
+    text-align: center;
+  }
+  
+.Note {
+    font-size: 18px;
+    font-weight: 200;
+    margin-bottom: 40px;
+    color: #7c8e9a;
+    text-align: center;
+  }
 @media only screen and (min-height: 880px) {
     .Page{
         max-height: calc(100vh - 200px);
+        padding-left: 60px;
+        padding-right: 60px;
     }
+}
+@media only screen and (max-width: 880px) {
+  .Page{
+      padding-left: 40px;
+      padding-right: 40px;
+  }
 }

@@ -12,10 +12,10 @@ function App() {
     <>
       <Navbar />
       <Home />
-      <AboutPage />
       {/* <ContactPage/> */}
       <ServicesPage/>
       <WorkPage />
+      <AboutPage />
       <Contact/>
       <Footer />
     </>
