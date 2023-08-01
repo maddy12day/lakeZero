@@ -1,27 +1,10 @@
 .Page{
-    background-color: #455655;
+    display: flex;
+    justify-content: center;
 }
 .ContactInfoContainer{
-    height: 100%;
-    width: -webkit-max-content;
-    width: -moz-max-content;
-    width: max-content;
-    display: grid;
-    place-items: center;
-    margin-left: auto;
-    margin-right: auto;
-}
-.flexRow{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    place-items: center;
-}
-.flexColumn{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    place-items: center;
+    overflow: unset;
+    gap:20px
 }
 
 .gridCenter{
@@ -111,7 +94,6 @@ button {
 }
 
 .ContactInfo {
-    height: 100%;
     width: max-content;
     place-self: start;
 }

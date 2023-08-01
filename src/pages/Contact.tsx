@@ -2,9 +2,9 @@ import PageStyle from '../style/PageStyle.module.css'
 import Style from '../style/ContactPageStyle.module.css'
 export const Contact = () => {
     return (
-        <div className={`${Style.ContactInfoContainer}`}>
-            <div className={`${Style.flexRow}`}>
-                <div className={`${Style.flexColumn}`}>
+        <div className={`${PageStyle.Page} ${Style.Page}`}>
+            <div className={`${PageStyle.Container} ${Style.ContactInfoContainer}`}>
+                <div className={`${PageStyle.ContainerColFlex}`}>
                     <div className={`${Style.ContactInfo}`}>
                         <div>
                             <p>Animesh Shukla</p>
