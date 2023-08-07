@@ -1,97 +1,73 @@
 @import url('https://fonts.googleapis.com/css2?family=Lugrasimo&family=Lumanosimo&family=Nunito+Sans:ital,wght@0,400;0,700;1,300;1,400;1,600;1,700&family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&display=swap');
 
-.Page{
-    display: flex;
-    justify-content: center;
-}
 
-.LeftSide{
-    /* min-width: 50%; */
-    width: 55%;
-}
-.heading {
-    font-weight: 900;
-    font-size: 80px;
-    text-align: left;
-}
-.points p{
-    background-color: transparent;
-    font-weight: 900;
-    text-align: justify;
-    padding: 6px;
-    margin-bottom: 2px;
-    overflow-wrap: break-word;
-}
-.RightSide{
-    width: 400px ;
-    place-items: end;
-}
-
-.Card{
-    height: 40%;
-    width: auto;
-    aspect-ratio: 1;
-    border-radius: 16px;
-    background-color: aliceblue;
+.parentDiv{
+    height: 100vh;
     position: relative;
-    overflow: hidden;
 }
-.CardBackground{
+.imageDiv{
+    height: 100vh;
+    background:url('../assets/About_Bg.png') rgba(128, 128, 128, 0.8);
+    background-blend-mode: multiply;
+    background-repeat:no-repeat;
+    background-position: center center; 
+    background-size: cover;  
+}
+.aboutBody{
     position: absolute;
-    height: 100%;
-    width: 100%;
-}
-.CardBackground img{
+    top: 0%;
     height: inherit;
-    width: inherit;
-}
-.CardWrapper{
-    height: 100%;
     width: 100%;
-    position: relative;
-    transition: ease-in 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+.leftSection{
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+    height: 80vh;
+    flex-wrap: wrap;
+}
+.aboutHeading{
+    font-family: 'lakeZeroFonts';
+    font-size: 50px;
+}
+.aboutDesc{
+    color: black;
+    font-weight: 700;
+    font-size: 18px;
+
 }
 
-.Data{
-    padding:14px;
-    width:max-content;
-    position: absolute;
-    text-align: center;
-    inset: auto 0px 10px 0px;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: #ffb5b58b;
-    border-radius: 8px;
-    transition: ease-in 0.2s;
+.aboutImg{
+    height: 80vh;
+    width: 35%;
+    background-image: url('../assets/About.jpg');
+    background-repeat:no-repeat;
+    background-position: center center; 
+    background-size: cover;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
 }
-.Card:hover .Data{
-    background-color: #ffb5b5;
+.aboutOwner{
+    background-color: white;
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
 }
-.Card:hover .CardWrapper{
-    background-color: rgba(255, 255, 255, 0.511);
+hr{
+    border-top: 1px dashed black;
+    width: 35%;
 }
-
-@media only screen and (max-width:821px){
-    .Card{
-        height: 40%;
-    }
+.blurEnable{
+    filter: blur(4px);
 }
-
-.Circle1, .Circle2{
-    height: 100vmax;
-    width: 100vmax;
-    position: absolute;
-    background-color: #a29ac1;
-    border-radius: 50%;
-    left: -32vmax;
-    top: -40vmax;
-    z-index: -1;
+.blurDisable{
+    filter: blur(0);
 }
-.Circle2{
-    right:-10%;
-    bottom:-20%;
-    left:auto;
-    top:auto;
-}
-
 

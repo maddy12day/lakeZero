@@ -1,7 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Syne&display=swap');
+@font-face {
+  font-family: lakeZeroFonts;
+  src: url('./assets/LakeZero_Regular.ttf');
+}
 *,:root {
     box-sizing: border-box;
-    font-family: 'Syne', sans-serif;
+    font-family: 'lakeZeroFonts';
 }
 
 body{
@@ -23,3 +27,26 @@ hr{
 a:visited{
     color: inherit;
 }
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  
+  
+  /* Track */
+  /*::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+  }
+  */
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(3, 47, 76); 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: black; 
+  }
