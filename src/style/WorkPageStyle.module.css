@@ -7,6 +7,11 @@
     max-height: calc(100vh - 100px);
 }
 
+.Container{
+    justify-content: center;
+    overflow: hidden;
+}
+
 
 .CardWrapper{
     border-radius: 16px;

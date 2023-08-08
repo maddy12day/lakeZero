@@ -16,7 +16,7 @@ function App() {
       <ServicesPage/>
       <WorkPage />
       <AboutPage />
-      <Contact/>
+      {/* <Contact/> */}
       <Footer />
     </>
   )

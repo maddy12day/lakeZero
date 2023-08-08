@@ -3,7 +3,10 @@
     box-sizing: border-box;
     font-family: 'Syne', sans-serif;
 }
-
+@font-face {
+    font-family: 'Lakezero';
+    src: url('../src/assets/LakeZero-Regular1.ttf');
+}
 body{
     margin: 0px;
 }
