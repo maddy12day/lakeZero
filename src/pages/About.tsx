@@ -17,7 +17,7 @@ export const AboutPage = () => {
                     </section>
                     <section className={`${AboutPageStyle.aboutImg}`}>
                         <span className={`${AboutPageStyle.aboutOwner}`}>
-                            SUKRIT SHRIVASTAV
+                            SUKRIT SHRIVASTAV 
                             <hr />
                             Composer|Music Producer
                         </span>
