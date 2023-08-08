@@ -1,79 +1,137 @@
 .Page{
-    /* background-image: url('../assets/WORK_BG.png'); */
+    max-height: none;
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
+    background-image: url("/src/assets/new.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
 }
-.CarouselContainer{
-    color: #000000;
+
+.Circle{
+
+    height:300px;
+    width:100%;
     position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-  }
-  
-.CarouselWrapper{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    -webkit-mask-image: linear-gradient(rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 20%, rgb(0, 0, 0) 80%, rgba(0, 0, 0, 0) 100%);
-  }
-  
-  
-.Carousel {
-    display: flex;
-    overflow: hidden;
-    user-select: none;
-      width: 100%;
-      --webkit-mask-image: linear-gradient(rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 20%, rgb(0, 0, 0) 80%, rgba(0, 0, 0, 0) 100%);
-  }
-  
-  
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.Container{
+
+}
+.Line{
+    height: 3px;
+    border:none;
+    background-color: black;
+    padding:1px;
+    margin:10px;
+}
+
+/* .Container::after{
+    content: '';
+    height: 100vmax;
+    width: 100vmax;
+    background-color: black;
+    border-radius: 50%;
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    transform: translate(-50%,-50%);
+    z-index: -1;
+} */
+
 .CardContainer{
-    flex-shrink: 0;
+    height: 100%;
+    width: 30vw;
+    aspect-ratio: 4/3;
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    white-space: nowrap;
-    animation-delay: -5s;
-    gap: 10px;
+    opacity: 0;
+    border-radius: 8px;
+    overflow: hidden;
+    transform: translateZ(0);
+    transform: translateY(150px);
+    transition-timing-function: cubic-bezier(.175,.885,.32,1.275);
+}
+
+.CardContainer:nth-child(2){
+    transform: translateY(180px);
+}
+.CardContainer:nth-child(3){
+    transform: translateY(200px);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .CardContainer {
+      transition: opacity 2s, transform 1.5s ; 
+      transition-timing-function: cubic-bezier(.175,.885,.32,1.275);
+    }
   }
+  .CardAnimation {
+    opacity: 1;
+    transform: none !important;
+}
 
 .CardWrapper{
     border-radius: 16px;
-    width: 250px;
-    aspect-ratio: 4/4;
+    width:100%;
+    height: inherit;
     background: white;
     position: relative;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .Card{
-    height: 100%;
-    width: 100%;
+    height: inherit;
+    width: inherit;
     padding:16px 20px;
     position: relative;
+    text-align: right;
+    z-index: 1;
+    justify-content: space-evenly;
+}
+
+.Card::after{
+    content: '';
+    background:linear-gradient(to left, black, transparent);
+    /* background: linear-gradient(to left, rgb(0, 0, 0) 0%,rgba(0, 0, 0) 25%,rgba(0, 0, 0, 0.404) 70%, transparent 100%); */
+    height: 100%;
+    width: 100%;
+    left:0px;
+    top:0px;
+    position: absolute;
+    z-index: -1;
 }
 .CardBackground{
     position: absolute;
-    background-color: rgb(224, 213, 213);
     height: 100%;
-    width:100%;
+    width: 100%;
+    object-fit: cover;
 }
-.Container{
-    height: auto;
-    overflow: hidden;
+
+.Card .Title{
+    color: wheat;
 }
+
+
 @media only screen and (max-width:768px) {
+    .CardContainer{
+        width: 100%;
+        aspect-ratio: 16/9;
+    }
     .Container{
+        gap:15px;
         flex-direction: column;
     }
     .CardWrapper{
         width:100%;
-        height: auto;
-        aspect-ratio: 4/3;
+    }
+    .CardContainer:nth-child(2) .Card{
+        text-align: left;
+    }
+    .CardContainer:nth-child(2) .Card::after {
+        background: linear-gradient(to right, rgb(0, 0, 0) 0%,rgba(0, 0, 0) 30%,rgba(0, 0, 0, 0.404) 70%, transparent 100%);
     }
 }
