@@ -14,7 +14,7 @@ export const Navbar = () => {
 
           <div className={`${NavStyle.NavBarMenu} ${isNavCollapsed ? NavStyle.NavBarVisible : ''}`}>
             {NavData.map(item => (
-              <div className={`${NavStyle.NavItem}`}>
+              <div className={`${NavStyle.NavItem} ${NavStyle.hoverunderlineAnimation}`}>
                 <Link to={`#${item.navlinkName}`}
                   key={item.navlinkName}
                   onClick={() =>
