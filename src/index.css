@@ -1,12 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Syne&display=swap');
 @font-face {
-  font-family: lakeZeroFonts;
+  font-family: LakeZero;
   src: url('./assets/LakeZero_Regular.ttf');
 }
 *,:root {
     box-sizing: border-box;
-    font-family: 'lakeZeroFonts';
-    
 }
 @font-face {
     font-family: 'Lakezero';

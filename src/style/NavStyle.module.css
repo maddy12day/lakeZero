@@ -25,6 +25,7 @@
     justify-content: center;
 }
 .NavBarMenu{
+    font-family: 'LakeZero';
     display: flex;
     flex-direction: row;
     gap:10px;
