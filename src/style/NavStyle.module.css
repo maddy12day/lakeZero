@@ -25,6 +25,7 @@
     justify-content: center;
 }
 .NavBarMenu{
+    font-family: 'LakeZero';
     display: flex;
     flex-direction: row;
     gap:10px;
@@ -37,10 +38,13 @@
     font-size: 20px;
     color: white;
     font-weight: 400;
+    transition: transform 0.5s ease;
 }
 
 .NavItem:hover {
-    color:red
+    color:rgb(90, 155, 221);
+    transform: translateY(-3px) scale(1.1);
+
 }
 
 .BrandName{
@@ -94,3 +98,20 @@
         display: flex;
     }
 }
+.hoverunderlineAnimation:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: 
+  #0087ca;
+    transform-origin: bottom right;
+    transition: transform 0.4s ease-in;
+  }
+.hoverunderlineAnimation:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }

@@ -1,47 +1,56 @@
 .Page{
-    padding: 30px 120px ;
+    padding: 30px 10vw ;
     overflow: hidden;
     position: relative;
     height: max-content;
+    transform: translateZ(0);
+    opacity: 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .PageAnimation{
+    transition: opacity 0.5s ease;
+    opacity: 1;
+  }
 }
 .Container{
   display: flex;
-  justify-content: center;
-  overflow: hidden;
+  justify-content: space-between;
   gap:10px;
 }
 .ContainerColFlex{
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  overflow: hidden;
+  /* justify-content: center; */
   gap:10px;
 }
-.Text {
-    font-size: 35px;
-    font-weight: 500;
+.Title {
+    font-size: 72px;
+    font-weight: 600;
     margin-bottom: 10px;
+    font-family: 'Lakezero';
     color: #ffb5b5;
-    text-align: center;
   }
-  
+.Text{
+  font-size: 18px;
+  font-weight: 600;
+  color: wheat;
+}
 .Note {
     font-size: 18px;
     font-weight: 200;
     margin-bottom: 40px;
     color: #7c8e9a;
-    text-align: center;
-  }
-@media only screen and (min-height: 880px) {
-    .Page{
-        max-height: calc(100vh - 200px);
-        padding-left: 60px;
-        padding-right: 60px;
-    }
 }
-@media only screen and (max-width: 880px) {
+@media only screen and (max-width: 480px) {
   .Page{
-      padding-left: 40px;
-      padding-right: 40px;
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
+  .Text{
+    font-size: 16px;
+  }
+  .Title{
+    font-size: 36px;
   }
 }
