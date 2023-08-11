@@ -4,43 +4,43 @@ import { useEffect } from 'react'
 export const ServicesPage = () => {
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
-            // const cards = entry.target.getElementsByClassName(ServicesPageStyle.CardContainer);
             if (entry.isIntersecting) {
-                    entry.target?.classList.add(ServicesPageStyle.CardAnimation);
+                entry.target?.classList.add(ServicesPageStyle.CardAnimation);
                 return;
             }
         });
     });
 
     useEffect(() => {
-        observer.observe(document.getElementsByClassName(ServicesPageStyle.CardContainer)[0]);
-        observer.observe(document.getElementsByClassName(ServicesPageStyle.CardContainer)[1]);
-        observer.observe(document.getElementsByClassName(ServicesPageStyle.CardContainer)[2]);
+        const cards = Array.from(document.getElementsByClassName(ServicesPageStyle.CardContainer))
+        cards.forEach(card=>{
+            observer.observe(card)
+        })
     }, [])
     const services = [
         {
             bg: 'src/assets/587608.jpg',
-            group: [
-                'Music Production',
-                ' Music Composition',
-                'Music Mastering',
-            ],
+            name: 'Music Production'
         },
         {
             bg: 'src/assets/service2.jpg',
-            group: [
-                'Lyrics',
-                'Audio Dubbing',
-                'Session Instruments',
-            ],
+            name: 'Lyrics',
         },
         {
             bg: 'src/assets/service3.jpg',
-            group: [
-                'Foley',
-                'Background Score',
-                'Album Art'
-            ]
+            name: 'Recording',
+        },
+        {
+            bg: 'src/assets/service3.jpg',
+            name: ' Music Composition',
+        },
+        {
+            bg: 'src/assets/service3.jpg',
+            name: 'Background Score',
+        },
+        {
+            bg: 'src/assets/service3.jpg',
+            name: 'Music Mastering',
         }
     ]
     return <>
@@ -60,16 +60,19 @@ export const ServicesPage = () => {
                     </div> */}
                     <div className={`${PageStyle.Container} ${ServicesPageStyle.Container}`}>
                         {
-                            services.map(service => <>
-                                <div className={`${ServicesPageStyle.CardContainer}`}>
+                            services.map((service,index) => <>
+                                <div className={`${ServicesPageStyle.CardContainer}`} key={index}>
                                     <div className={`${ServicesPageStyle.CardWrapper}`}>
                                         <img src={service.bg} alt="" className={`${ServicesPageStyle.CardBackground}`} />
                                         <div className={`${PageStyle.ContainerColFlex} ${ServicesPageStyle.Card}`}>
-                                            {service.group.map(service => <>
-                                                <div className={`${PageStyle.Text}`}>
-                                                    {service}
-                                                </div>
-                                            </>)}
+                                            <div className={`${ServicesPageStyle.Text}`}>
+                                                {service.name}
+
+                                            </div>
+                                            <div className={`${ServicesPageStyle.CardFadeUp}`}>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati recusandae aut eos omnis veniam ea eum ab perspiciatis rerum voluptates.
+                                                <a href='' className={`${ServicesPageStyle.Link}`}>Learn More</a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
