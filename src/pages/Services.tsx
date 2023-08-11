@@ -1,7 +1,7 @@
 import ServicesPageStyle from '../style/ServicesPage.module.css'
 import PageStyle from '../style/PageStyle.module.css'
 import { useEffect } from 'react'
-export const ServicesPage = () => {
+export const ServicesPage = ({id}:{id:string}) => {
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -44,7 +44,7 @@ export const ServicesPage = () => {
         }
     ]
     return <>
-        <div className={`${PageStyle.Page} ${ServicesPageStyle.Page}`} id='SERVICES'>
+        <div className={`${PageStyle.Page} ${ServicesPageStyle.Page}`} id={id}>
 
             <div className={`${PageStyle.ContainerColFlex}`}>
                 <div className={`${PageStyle.Title}`}>Services</div>

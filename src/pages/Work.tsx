@@ -1,7 +1,7 @@
 import WorkPageStyle from '../style/WorkPageStyle.module.css'
 import { RotatingCarousel } from '../components/RotatingCarousel'
 import PageStyle from '../style/PageStyle.module.css'
-export const WorkPage = () => {
+export const WorkPage = ({id}:{id:string}) => {
     const row1 = [
         "https://www.youtube.com/watch?v=QTJhCrIuIYc",
         "https://www.youtube.com/watch?v=-tWCh0FNn3w",
@@ -32,7 +32,7 @@ export const WorkPage = () => {
         return thumbnailUrl
     }
     return <>
-        <div className={`${PageStyle.Page} ${WorkPageStyle.Page}`} id='WORK'>
+        <div className={`${PageStyle.Page} ${WorkPageStyle.Page}`} id={id}>
             <div className={`${PageStyle.Title}`}>Works</div>
             <div className={`${PageStyle.Container} ${WorkPageStyle.Container}`}>
                 <RotatingCarousel reverse={true} speed={3} data={row1.map(el=>{return {imageUrl: getVideoThumbnail(el), url:el}})}/>

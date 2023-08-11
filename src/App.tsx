@@ -35,12 +35,12 @@ function App() {
   return (
     <>
       <Navbar />
-      <Home />
+      <Home id="HOME"/>
       {/* <ContactPage/> */}
-      <ServicesPage/>
-      <WorkPage />
-      <AboutPage />
-      {/* <Contact/> */}
+      <ServicesPage id="SERVICES"/>
+      <WorkPage id="WORK"/>
+      <AboutPage id="ABOUT"/>
+      <Contact id='CONTACT'/>
       <Footer />
     </>
   )

@@ -1,9 +1,9 @@
 import AboutPageStyle from '../style/AboutPageStyle.module.css'
 import aboutData from '../data/aboutData.json'
 
-export const AboutPage = () => {
+export const AboutPage = ({id}:{id:string}) => {
     return <>
-        <div className={`${AboutPageStyle.parentDiv}`} id='ABOUT'>
+        <div className={`${AboutPageStyle.parentDiv}`} id={id}>
             <div className={`${AboutPageStyle.imageDiv} ${AboutPageStyle.blurEnable}`}></div>
             <div className={`${AboutPageStyle.aboutBody}`}>
                 

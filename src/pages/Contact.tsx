@@ -1,10 +1,11 @@
 import PageStyle from '../style/PageStyle.module.css'
 import Style from '../style/ContactPageStyle.module.css'
-export const Contact = () => {
+
+export const Contact = ({id}:{id:string}) => {
     return (
-        <div className={`${PageStyle.Page} ${Style.Page}`}>
+        <div className={`${PageStyle.Page} ${Style.Page}`} id={id}>
             <div className={`${PageStyle.Container} ${Style.ContactInfoContainer}`}>
-                <div className={`${PageStyle.ContainerColFlex}`}>
+                <div className={`${PageStyle.ContainerCpolFlex}`}>
                     <div className={`${Style.ContactInfo}`}>
                         <div>
                             <p>Animesh Shukla</p>
