@@ -1,11 +1,14 @@
 [
     {
-        "mediaUrl":"src/socialMedia/instagram.svg"
+        "mediaUrl":"src/socialMedia/ig.png"
     },
     {
-        "mediaUrl":"src/socialMedia/facebook.svg"
+        "mediaUrl":"src/socialMedia/fb.png"
     },
     {
-        "mediaUrl":"src/socialMedia/youtube.svg"
+        "mediaUrl":"src/socialMedia/yt.png"
+    },
+    {
+        "mediaUrl":"src/socialMedia/spotify.png"
     }
 ]
