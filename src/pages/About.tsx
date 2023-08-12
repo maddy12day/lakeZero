@@ -10,8 +10,8 @@ export const AboutPage = () => {
                     <section className={`${AboutPageStyle.leftSection}`}>
                         <h1 className={`${AboutPageStyle.aboutHeading}`}>ABOUT</h1>
                         <article className={`${AboutPageStyle.aboutDesc}`}>
-                        {aboutData.map(items=>(
-                            <p>{items.aboutDescription}</p>
+                        {aboutData.map((items,index)=>(
+                            <p key={index}>{items.aboutDescription}</p>
                         ))}
                         </article>
                     </section>
