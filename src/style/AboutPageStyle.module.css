@@ -74,3 +74,32 @@ hr{
     filter: blur(0);
 }
 
+@media only screen and (max-width:480px){
+    .imageDiv{
+        height: 95vh;
+    }
+    .aboutBody{
+        flex-direction: column;
+    }
+
+    .leftSection{
+        flex-direction: column;
+        width: 100vw;
+        /* justify-content: space-evenly; */
+    }
+    .aboutHeading{
+        margin: 20px auto;
+    }
+    .aboutDesc{
+        margin: 15px auto;
+        width: 95vw;
+        font-size: 12px;
+    }
+    .aboutImg{
+        margin-bottom: 50px;
+        width: 100vw;
+    }
+    .aboutOwner{
+        font-size: 12px;
+    }
+}
