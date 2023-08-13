@@ -1,23 +1,21 @@
 import AboutPageStyle from '../style/AboutPageStyle.module.css'
 import aboutData from '../data/aboutData.json'
-
-export const AboutPage = ({id}:{id:string}) => {
+import PageStyle from '../style/PageStyle.module.css'
+export const AboutPage = ({ id }: { id: string }) => {
     return <>
-        <div className={`${AboutPageStyle.parentDiv}`} id={id}>
-            <div className={`${AboutPageStyle.imageDiv} ${AboutPageStyle.blurEnable}`}></div>
+        <div className={`${AboutPageStyle.parentDiv} ${PageStyle.Page}`} id={id}>
+            <div className={`${AboutPageStyle.blurEnable}`}></div>
             <div className={`${AboutPageStyle.aboutBody}`}>
-                
-                    <section className={`${AboutPageStyle.leftSection}`}>
-                        <h1 className={`${AboutPageStyle.aboutHeading}`}>ABOUT</h1>
-                        <article className={`${AboutPageStyle.aboutDesc}`}>
-                        {aboutData.map((items,index)=>(
+                <h1 className={`${AboutPageStyle.aboutHeading}`}>ABOUT</h1>
+                <div className={`${PageStyle.Container} ${AboutPageStyle.DataSection}`}>
+                    <article className={`${AboutPageStyle.aboutDesc}`}>
+                        {aboutData.map((items, index) => (
                             <p key={index}>{items.aboutDescription}</p>
                         ))}
-                        </article>
-                    </section>
+                    </article>
                     <section className={`${AboutPageStyle.aboutImg}`}>
                         <span className={`${AboutPageStyle.aboutOwner}`}>
-                            SUKRIT SHRIVASTAV 
+                            SUKRIT SHRIVASTAV
                             <hr />
                             Composer|Music Producer
                         </span>
@@ -27,7 +25,8 @@ export const AboutPage = ({id}:{id:string}) => {
                             Music Producer|Guitarist
                         </span>
                     </section>
-                
+                </div>
+
             </div>
         </div>
     </>

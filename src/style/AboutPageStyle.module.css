@@ -2,49 +2,49 @@
 
 
 .parentDiv{
-    height: 100vh;
+    min-height: 100vh;
     position: relative;
-}
-.imageDiv{
-    height: 100vh;
-    background:url('../assets/About_Bg.png') rgba(128, 128, 128, 0.8);
-    background-blend-mode: multiply;
+    /* height: 100vh; */
+    background:url('../assets/About_Bg.png') ;
+    /* background-blend-mode: multiply; */
     background-repeat:no-repeat;
     background-position: center center; 
-    background-size: cover;  
+    background-size: cover; 
+}
+.imageDiv{
+ 
 }
 .aboutBody{
-    position: absolute;
-    top: 0%;
+    position: relative;
+    z-index: 1;
     height: inherit;
     width: 100%;
     display: flex;
-    align-items: center;
-    justify-content: space-evenly;
+    flex-direction: column;
+    justify-content: space-between;
 
 }
-.leftSection{
-    display: flex;
-    flex-direction: column;
-    width: 35%;
-    height: 80vh;
-    flex-wrap: wrap;
+.DataSection{
+    width: 100%;
 }
 .aboutHeading{
     font-family: 'LakeZero';
     font-size: 50px;
+    text-align: left;
 }
 .aboutDesc{
     color: black;
     font-family: 'Times New Roman', Times, serif;
     font-weight: 700;
     font-size: 18px;
-
+    width: 40%;
+    text-align: justify;
 }
 
 .aboutImg{
     height: 80vh;
-    width: 35%;
+    width: 50%;
+    height: auto;
     border-radius: 5px;
     background-image: url('../assets/About.jpg');
     background-repeat:no-repeat;
@@ -60,7 +60,6 @@
     width: 35%;
     display: flex;
     flex-direction: column;
-    align-items: center;
     margin-bottom: 10px;
 }
 hr{
@@ -68,7 +67,13 @@ hr{
     width: 35%;
 }
 .blurEnable{
-    filter: blur(4px);
+    backdrop-filter: blur(4px);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top:0;
+    background-color: rgba(208, 208, 208, 0.48);
 }
 .blurDisable{
     filter: blur(0);
@@ -82,22 +87,22 @@ hr{
         flex-direction: column;
     }
 
-    .leftSection{
+    .DataSection{
         flex-direction: column;
-        width: 100vw;
-        /* justify-content: space-evenly; */
     }
     .aboutHeading{
-        margin: 20px auto;
+        margin: 16px 0px;
     }
     .aboutDesc{
         margin: 15px auto;
-        width: 95vw;
+        width: 100%;
         font-size: 12px;
     }
     .aboutImg{
+        width: 100%;
+
         margin-bottom: 50px;
-        width: 100vw;
+        aspect-ratio: 4/4;
     }
     .aboutOwner{
         font-size: 12px;
