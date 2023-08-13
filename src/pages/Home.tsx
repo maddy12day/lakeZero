@@ -1,14 +1,14 @@
 import HomeStyle from '../style/Home.module.css'
 import { SocialMediaContainer } from "../components/SocialMediaContainer";
 import PageStyle from '../style/PageStyle.module.css'
-
-export function Home() {
+import mediaData from '../data/socialMediaIcon.json'
+export const Home = ({ id }: { id: string }) => {
     return <>
-            <div className={`${PageStyle.Page} ${HomeStyle.background}`}>
-                <div className={`${HomeStyle.Brand}`}>
-                    <img src="src/assets/WhiteTransp.png" alt="" className={`${HomeStyle.img}`} />
-                </div>
-                <SocialMediaContainer />
+        <div className={`${PageStyle.Page} ${HomeStyle.background}`} id={id}>
+            <div className={`${HomeStyle.Brand}`}>
+                <img src="src/assets/WhiteTransp.png" alt="" className={`${HomeStyle.img}`} />
+            </div>
+            <SocialMediaContainer mediaUrl={mediaData}/>
         </div>
     </>
 }

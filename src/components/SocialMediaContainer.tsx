@@ -1,11 +1,22 @@
-import mediaIcon from '../data/socialMediaIcon.json'
-import { SocialMedia } from './FooterComp'
 import Styles from '../style/Styles.module.css'
-export const SocialMediaContainer = () => {
+
+interface footerType {
+    mediaUrl: {
+        mediaIcon: string,
+        mediaUrl: string,
+        title:string
+    }[];
+}
+
+export const SocialMediaContainer = ({ mediaUrl }: footerType) => {
     return <>
         <div className={`${Styles.SocialMediaContainer}`}>
-            {mediaIcon.map((item,index) => (
-                <SocialMedia{...item} className={`${Styles.SocialMedia}`} key={index}/>
+            {mediaUrl?.map((item, index: number) => (
+                <a href={item.mediaUrl} key={index} title={item.title}>
+                    <div className={Styles.SocialMedia} >
+                        <img src={item.mediaIcon} title={item.title}/>
+                    </div>
+                </a>
             ))}
         </div>
     </>

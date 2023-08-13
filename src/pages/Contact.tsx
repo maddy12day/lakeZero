@@ -1,28 +1,27 @@
 import PageStyle from '../style/PageStyle.module.css'
 import Style from '../style/ContactPageStyle.module.css'
-export const Contact = () => {
+import { Widget } from '@typeform/embed-react'
+import { SocialMediaContainer } from '../components/SocialMediaContainer'
+import mediaData from '../data/socialMediaIcon.json'
+export const Contact = ({ id }: { id: string }) => {
     return (
-        <div className={`${Style.ContactInfoContainer}`}>
-            <div className={`${Style.flexRow}`}>
-                <div className={`${Style.flexColumn}`}>
-                    <div className={`${Style.ContactInfo}`}>
-                        <div>
-                            <p>Animesh Shukla</p>
-                            <p>business@lakezero.com</p>
-                            <p>Address - <br /> Lorem ipsum dolor sit.<br /> Lorem ipsum dolor sit.<br />
-                                Mumbai, Maharashtra <br />
-                                India
-                            </p>
+        <>
+            <div className={`${Style.Ribbon}`}>Get in Touch with us</div>
+            <div className={`${PageStyle.Page} ${Style.Page}`} id={id}>
+                <div className={`${PageStyle.ContainerColFlex} ${Style.Container}`}>
+                    <div className={`${PageStyle.Title}`}>
+                        Contact Us
+                    </div>
+                    <div className={`${PageStyle.Container} ${Style.Container}`}>
+                        <div className={`${PageStyle.ContainerColFlex} ${Style.ContactInfo}`}>
+                            <div>
+                                Animesh Shukla
+                            </div>
+                            <SocialMediaContainer mediaUrl={mediaData}/>
                         </div>
+                        <Widget id="h4tmeBNy" className={`my-form ${Style.Form}`} />
                     </div>
-                    <div className={`${Style.flexRow} ${Style.SocialMedia}`}>
-                        <a href="https://www.instagram.com/lakezero" target="_blank" rel="noreferrer">
-                            <img src='src/socialMedia/instagram.svg' height={'24px'} width={'24px'}/>
-                            {/* <div className={`${Style.Media}`}> <FontAwesomeIcon icon={faInstagramSquare} /></div> */}
-                            </a>
-                    </div>
-                </div>
-                <div className={`${Style.Form}`}>
+                    {/* <div className={`${Style.Form}`}>
                     <label>Drop us a message</label>
                     <div className={`${Style.Name}`}>
                         <input type="text" placeholder="First Name" autoComplete="false" />
@@ -32,8 +31,9 @@ export const Contact = () => {
                     <input type="email" placeholder="name@company.com" pattern='[a-zA-Z\-\.]@[a-zA-Z].com'/>
                     <textarea name="" id="" cols="30" rows="5" placeholder="Message"></textarea>
                     <button id="send" className="gridCenter">Send</button>
+                </div> */}
                 </div>
             </div>
-        </div>
+        </>
     )
 }

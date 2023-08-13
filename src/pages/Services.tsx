@@ -1,7 +1,7 @@
 import ServicesPageStyle from '../style/ServicesPage.module.css'
 import PageStyle from '../style/PageStyle.module.css'
 import { useEffect } from 'react'
-export const ServicesPage = () => {
+export const ServicesPage = ({id}:{id:string}) => {
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -44,20 +44,12 @@ export const ServicesPage = () => {
         }
     ]
     return <>
-        <div className={`${PageStyle.Page} ${ServicesPageStyle.Page}`} id='SERVICES'>
+        <div className={`${PageStyle.Page} ${ServicesPageStyle.Page}`} id={id}>
 
             <div className={`${PageStyle.ContainerColFlex}`}>
                 <div className={`${PageStyle.Title}`}>Services</div>
                 <div className={`${PageStyle.ContainerColFlex} `} >
                     <div className={`${PageStyle.Note}`}>Services that are worth taking. Reach new heights with us. <br />Only thing which can limit you is Imagination. Get what you can Imagine</div>
-                    {/* <div className={`${ServicesPageStyle.Circle}`}>
-                        <hr className={`${ServicesPageStyle.Line}`}/>
-                        <hr className={`${ServicesPageStyle.Line}`}/>
-                        <hr className={`${ServicesPageStyle.Line}`}/>
-                        <hr className={`${ServicesPageStyle.Line}`}/>
-                        <hr className={`${ServicesPageStyle.Line}`}/>
-
-                    </div> */}
                     <div className={`${PageStyle.Container} ${ServicesPageStyle.Container}`}>
                         {
                             services.map((service,index) => <>
