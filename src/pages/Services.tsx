@@ -50,14 +50,6 @@ export const ServicesPage = ({id}:{id:string}) => {
                 <div className={`${PageStyle.Title}`}>Services</div>
                 <div className={`${PageStyle.ContainerColFlex} `} >
                     <div className={`${PageStyle.Note}`}>Services that are worth taking. Reach new heights with us. <br />Only thing which can limit you is Imagination. Get what you can Imagine</div>
-                    {/* <div className={`${ServicesPageStyle.Circle}`}>
-                        <hr className={`${ServicesPageStyle.Line}`}/>
-                        <hr className={`${ServicesPageStyle.Line}`}/>
-                        <hr className={`${ServicesPageStyle.Line}`}/>
-                        <hr className={`${ServicesPageStyle.Line}`}/>
-                        <hr className={`${ServicesPageStyle.Line}`}/>
-
-                    </div> */}
                     <div className={`${PageStyle.Container} ${ServicesPageStyle.Container}`}>
                         {
                             services.map((service,index) => <>
