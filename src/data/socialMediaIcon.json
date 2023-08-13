@@ -1,22 +1,14 @@
 [
     {
-        "mediaIcon":"src/socialMedia/instagram.svg",
-        "mediaUrl":"https://www.instagram.com/lakezerostudio/",
-        "title":"Instagram"
+        "mediaUrl":"src/socialMedia/ig.png"
     },
     {
-        "mediaIcon":"src/socialMedia/facebook.svg",
-        "mediaUrl":"https://www.linkedin.com/in/lake-zero",
-        "title":"Linkedin"
+        "mediaUrl":"src/socialMedia/fb.png"
     },
     {
-        "mediaIcon":"src/socialMedia/youtube.svg",
-        "mediaUrl":"",
-        "title":"YouTube"
+        "mediaUrl":"src/socialMedia/yt.png"
     },
     {
-        "mediaIcon":"",
-        "mediaUrl":"https://twitter.com/LakeZero",
-        "title":"Twitter"
+        "mediaUrl":"src/socialMedia/spotify.png"
     }
 ]

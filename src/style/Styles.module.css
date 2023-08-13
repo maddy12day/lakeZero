@@ -7,6 +7,8 @@
     bottom: 0;
 }
 
-.SocialMedia{
-    margin: 6px
+.iconStyle{
+    height: 50px;
+    width: 50px;
+    margin: 0px 20px 20px 10px;
 }
