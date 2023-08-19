@@ -1,14 +1,21 @@
-.SocialMediaContainer{
+.SocialMediaContainer {
     display: flex;
     justify-content: space-between;
     width: fit-content;
     place-self: center;
     position: absolute;
     bottom: 0;
+    margin-bottom: 30px;
+    gap:10px
 }
 
-.iconStyle{
+.iconStyle {
     height: 50px;
     width: 50px;
-    margin: 0px 20px 20px 10px;
+}
+.SocialMedia{
+    transition: all 1s ease;
+}
+.SocialMedia:hover{
+    transform: scale(1.1);
 }

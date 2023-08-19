@@ -1,14 +1,22 @@
 [
     {
-        "mediaUrl":"src/socialMedia/ig.png"
+        "mediaIcon":"src/socialMedia/ig.png",
+        "mediaUrl":"",
+        "title":"Instagram"
     },
     {
-        "mediaUrl":"src/socialMedia/fb.png"
+        "mediaIcon":"src/socialMedia/fb.png",
+        "mediaUrl":"",
+        "title":"FaceBook"
     },
     {
-        "mediaUrl":"src/socialMedia/yt.png"
+        "mediaIcon":"src/socialMedia/yt.png",
+        "mediaUrl":"",
+        "title":"YouTube"
     },
     {
-        "mediaUrl":"src/socialMedia/spotify.png"
+        "mediaIcon":"src/socialMedia/spotify.png",
+        "mediaUrl":"",
+        "title":"Spotify"
     }
 ]

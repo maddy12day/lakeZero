@@ -5,10 +5,10 @@
     min-height: 100vh;
     position: relative;
     /* height: 100vh; */
-    background:url('../assets/About_Bg.png') ;
-    /* background-blend-mode: multiply; */
+    background-image:url('../assets/about1.png') , linear-gradient(to right, black, rgba(0, 0, 0, 0) );
+    background-blend-mode:overlay ;
     background-repeat:no-repeat;
-    background-position: center center; 
+    background-position: top center; 
     background-size: cover; 
 }
 .imageDiv{
@@ -36,7 +36,7 @@
     color: black;
     font-family: 'Times New Roman', Times, serif;
     font-weight: 700;
-    font-size: 18px;
+    font-size: var(--font-small);
     width: 40%;
     text-align: justify;
 }
@@ -45,7 +45,7 @@
     height: 80vh;
     width: 50%;
     height: auto;
-    border-radius: 5px;
+    border-radius: var(--border-radius);
     background-image: url('../assets/About.jpg');
     background-repeat:no-repeat;
     background-position: center center; 
@@ -73,7 +73,7 @@ hr{
     width: 100%;
     left: 0;
     top:0;
-    background-color: rgba(208, 208, 208, 0.48);
+    background-color: rgba(53, 53, 53, 0.705);
 }
 .blurDisable{
     filter: blur(0);
@@ -96,7 +96,7 @@ hr{
     .aboutDesc{
         margin: 15px auto;
         width: 100%;
-        font-size: 12px;
+        font-size: var(--font-extra-small);
     }
     .aboutImg{
         width: 100%;
@@ -105,6 +105,6 @@ hr{
         aspect-ratio: 4/4;
     }
     .aboutOwner{
-        font-size: 12px;
+        font-size: var(--font-extra-small);
     }
 }

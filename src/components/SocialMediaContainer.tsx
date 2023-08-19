@@ -4,19 +4,20 @@ interface footerType {
     mediaUrl: {
         mediaIcon: string,
         mediaUrl: string,
-        title:string
+        title: string
     }[];
+    className: string;
 }
 
-export const SocialMediaContainer = ({ mediaUrl }: footerType) => {
+export const SocialMediaContainer = ({ mediaUrl, className = '' }: footerType) => {
     return <>
-        <div className={`${Styles.SocialMediaContainer}`}>
+        <div className={`${Styles.SocialMediaContainer} ${className}`}>
             {mediaUrl?.map((item, index: number) => (
-                <a href={item.mediaUrl} key={index} title={item.title}>
-                    <div className={Styles.SocialMedia} >
-                        <img src={item.mediaIcon} title={item.title}/>
-                    </div>
-                </a>
+                <div className={`${Styles.SocialMedia}`} >
+                    <a href={item.mediaUrl} key={index} title={item.title}>
+                        <img src={item.mediaIcon} title={item.title} className={`${Styles.iconStyle}`}/>
+                    </a>
+                </div>
             ))}
         </div>
     </>

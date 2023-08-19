@@ -1,57 +1,60 @@
-@import url('https://fonts.googleapis.com/css2?family=Syne&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+*,
+:root {
+  box-sizing: border-box;
+  font-family: 'Roboto Mono', monospace;
+  --border-radius:8px;
+  --font-extra-large:72px;
+  --font-large:50px;
+  --font-small:16px;
+  --font-extra-small:12px;
+  --title-font-size:36px;
+  --text-font-size:16px;
+}
+
 @font-face {
-  font-family: LakeZero;
-  src: url('./assets/LakeZero_Regular.ttf');
-}
-*,:root {
-    box-sizing: border-box;
-}
-@font-face {
-    font-family: 'Lakezero';
-    src: url('../src/assets/LakeZero-Regular1.ttf');
-}
-body{
-    margin: 0px;
+  font-family: 'LakeZero';
+  src: url('../src/assets/LakeZero-Regular1.ttf');
 }
 
-a{
-    text-decoration: none;
+body {
+  margin: 0px;
 }
 
-hr{
-    height: 1px;
-    background: black;
-    color: black;
-    border-radius: 1px;
-    border: none;
+a {
+  text-decoration: none;
 }
 
-a:visited{
-    color: inherit;
+hr {
+  height: 1px;
+  background: black;
+  color: black;
+  border-radius: 1px;
+  border: none;
 }
+
+a:visited {
+  color: inherit;
+}
+
 ::-webkit-scrollbar {
-    width: 5px;
-  }
-  
-.displayNone{
+  width: 5px;
+}
+
+.displayNone {
   display: none;
 }
-  
-  
-  /* Track */
-  /*::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 5px grey; 
-    border-radius: 10px;
-  }
-  */
-   
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: rgb(3, 47, 76); 
-    border-radius: 10px;
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: black; 
-  }
+
+
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(3, 47, 76);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: black;
+}

@@ -19,33 +19,38 @@ export const ServicesPage = ({id}:{id:string}) => {
     }, [])
     const services = [
         {
-            bg: 'src/assets/587608.jpg',
-            name: 'Music Production'
+            bg: 'src/assets/music_production.jpg',
+            name: 'Music Production',
+            text:"Turn creative visions into reality with expert music production. From composition to mixing, we craft immersive sonic experiences that captivate audiences."
         },
         {
-            bg: 'src/assets/service2.jpg',
+            bg: 'src/assets/lyrics.jpg',
             name: 'Lyrics',
+            text:"Craft compelling stories and emotions through expertly written lyrics. Our skilled writers bring depth and meaning to your music."
         },
         {
-            bg: 'src/assets/service3.jpg',
+            bg: 'src/assets/recording.jpg',
             name: 'Recording',
+            text:"Capture the magic of your music with top-tier recording services. Our studio offers professional quality and a comfortable creative environment."
         },
         {
-            bg: 'src/assets/service3.jpg',
+            bg: 'src/assets/music_composition.jpg',
             name: ' Music Composition',
+            text:"Ignite musical journeys with original composition. Our skilled composers create captivating melodies that resonate, enriching your project with unique artistry."
         },
         {
-            bg: 'src/assets/service3.jpg',
+            bg: 'src/assets/background_score.jpg',
             name: 'Background Score',
+            text:"Enhance visuals and emotions with captivating background scores. Our compositions enrich storytelling, immersing audiences in memorable cinematic experiences."
         },
         {
-            bg: 'src/assets/service3.jpg',
+            bg: 'src/assets/music_mastering.png',
             name: 'Music Mastering',
+            text:"Elevate your tracks with professional music mastering services. Achieve balanced, polished sound that stands out across all platforms. Unlock your music's potential."
         }
     ]
     return <>
         <div className={`${PageStyle.Page} ${ServicesPageStyle.Page}`} id={id}>
-
             <div className={`${PageStyle.ContainerColFlex}`}>
                 <div className={`${PageStyle.Title}`}>Services</div>
                 <div className={`${PageStyle.ContainerColFlex} `} >
@@ -62,7 +67,7 @@ export const ServicesPage = ({id}:{id:string}) => {
 
                                             </div>
                                             <div className={`${ServicesPageStyle.CardFadeUp}`}>
-                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati recusandae aut eos omnis veniam ea eum ab perspiciatis rerum voluptates.
+                                                {service.text}
                                                 <a href='' className={`${ServicesPageStyle.Link}`}>Learn More</a>
                                             </div>
                                         </div>

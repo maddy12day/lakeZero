@@ -1,13 +1,13 @@
-.CarouselContainer{
+.CarouselContainer {
   color: #000000;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 25%;
+  width: 200px;
 }
 
-.CarouselWrapper{
+.CarouselWrapper {
   width: 100%;
   height: 100%;
   display: flex;
@@ -21,21 +21,23 @@
   display: flex;
   overflow: hidden;
   user-select: none;
-    flex-direction: column;
-    width: 100%;
-    --webkit-mask-image: linear-gradient(rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 20%, rgb(0, 0, 0) 80%, rgba(0, 0, 0, 0) 100%);
+  flex-direction: column;
+  width: 100%;
+  --webkit-mask-image: linear-gradient(rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 20%, rgb(0, 0, 0) 80%, rgba(0, 0, 0, 0) 100%);
 }
 
-@keyframes scrollY{
+@keyframes scrollY {
   from {
     top: translateY(0);
   }
+
   to {
     transform: translateY(-100%);
   }
 }
 
-.CarouselMarquee, .CarouselMarqueeReverse{
+.CarouselMarquee,
+.CarouselMarqueeReverse {
   flex-shrink: 0;
   display: flex;
   align-items: center;
@@ -51,20 +53,24 @@
   animation-direction: reverse;
 }
 
-.MarqueeSpeed_1{
-    animation-duration: 70s;
+.MarqueeSpeed_1 {
+  animation-duration: 70s;
 }
-.MarqueeSpeed_2{
-    animation-duration: 50s;
+
+.MarqueeSpeed_2 {
+  animation-duration: 50s;
 }
-.MarqueeSpeed_3{
-    animation-duration: 30s;
+
+.MarqueeSpeed_3 {
+  animation-duration: 30s;
 }
-.MarqueeSpeed_4{
-    animation-duration: 20s;
+
+.MarqueeSpeed_4 {
+  animation-duration: 20s;
 }
-.MarqueeSpeed_5{
-    animation-duration: 10s;
+
+.MarqueeSpeed_5 {
+  animation-duration: 10s;
 }
 
 .ImageGroup {
@@ -73,7 +79,7 @@
   width: clamp(10rem, 1rem + 27vmin, 30rem);
 }
 
-.Image{
+.Image {
   object-fit: contain;
   width: 100%;
   height: 100%;
@@ -83,35 +89,34 @@
   /* padding: 5px 20px;  */
 }
 
-.Card{
-    position: relative;
-    border-radius: 24px;
-    transition: ease-in-out 0.4s;
-    margin: 5px 0;
-    width: 100%;
-}
-.CardImage{
-
-}
-.Card:hover{
-    transform:scale(1.1);
-}
-.Card:hover .CardTitle {
-    font-size: 37px;
-}
-.CardTitle{
-    width: 100%;
-    transition: all 0.5s ease-in;
-    height: fit-content;
-    position: absolute;
-    bottom: 70px;
-    margin-left: 16px;
-    color: white;
-    font-size: 36px;
+.Card {
+  position: relative;
+  border-radius: 24px;
+  transition: ease-in-out 0.4s;
+  margin: 5px 0;
+  width: 100%;
 }
 
-@media only screen and (max-width:768px){
-  .AppContainer{
+.CardImage {}
+
+.Card:hover {
+  transform: scale(1.1);
+}
+
+
+.CardTitle {
+  width: 100%;
+  transition: all 0.5s ease-in;
+  height: fit-content;
+  position: absolute;
+  bottom: 70px;
+  margin-left: 16px;
+  color: white;
+  font-size: 36px;
+}
+
+@media only screen and (max-width:768px) {
+  .AppContainer {
     width: 33%;
     max-height: 500px;
   }

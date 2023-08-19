@@ -1,56 +1,75 @@
-.Page{
-    padding: 30px 10vw ;
-    overflow: hidden;
-    position: relative;
-    height: max-content;
-    /* transform: translateZ(0); */
-    opacity: 0;
+.Page {
+  padding: 8vmin 10vmax;
+  overflow: hidden;
+  position: relative;
+  height: max-content;
+  opacity: 0;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .PageAnimation{
+  .PageAnimation {
     transition: opacity 0.5s ease;
     opacity: 1;
   }
 }
-.Container{
+
+.Container {
   display: flex;
   justify-content: space-between;
-  gap:10px;
+  gap: 10px;
+  z-index: 1;
 }
-.ContainerColFlex{
+
+.ContainerColFlex {
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
-  gap:10px;
+  z-index: 1;
+  gap: 10px;
 }
+
 .Title {
-    font-size: 72px;
-    font-weight: 600;
-    margin-bottom: 10px;
-    font-family: 'Lakezero';
-    color: #ffb5b5;
-  }
-.Text{
-  font-size: 18px;
+  font-size: var(--font-extra-large);
+  font-weight: 600;
+  margin-bottom: 10px;
+  font-family: 'LakeZero';
+  z-index: 1;
+  mix-blend-mode: difference;
+  color: #ffb5b5;
+  letter-spacing: 3px;
+}
+
+.blurEnable {
+  backdrop-filter: blur(4px);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+
+.Text {
+  font-size: var(--font-small);
   font-weight: 600;
   color: wheat;
 }
+
 .Note {
-    font-size: 18px;
-    font-weight: 200;
-    margin-bottom: 40px;
-    color: #7c8e9a;
+  font-size: var(--font-small);
+  font-weight: 200;
+  margin-bottom: 40px;
+  color: #7c8e9a;
 }
+
 @media only screen and (max-width: 480px) {
-  .Page{
-    padding-left: 5vw;
-    padding-right: 5vw;
+  .Page {
+    padding: 5vmax 5vmin;
   }
-  .Text{
-    font-size: 16px;
+
+  .Text {
+    font-size: var(--font-small);
   }
-  .Title{
+
+  .Title {
     font-size: 36px;
   }
 }

@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
-.custombackground{
+
+.custombackground {
     background-color: transparent;
 }
 
-.NavBar{
+.NavBar {
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -15,26 +16,28 @@
     transition: all 0.1s ease-in-out;
 }
 
-.someClass{
+.someClass {
     position: relative;
 }
-.NavBarWrapper{
+
+.NavBarWrapper {
     display: flex;
     flex-direction: row;
     width: 100%;
     justify-content: center;
 }
-.NavBarMenu{
+
+.NavBarMenu {
     font-family: 'LakeZero';
     display: flex;
     flex-direction: row;
-    gap:10px;
+    gap: 10px;
     justify-content: space-between;
 }
 
-.NavItem{
-    width:auto;
-    padding:8px;
+.NavItem {
+    width: auto;
+    padding: 8px;
     font-size: 20px;
     color: white;
     font-weight: 400;
@@ -42,22 +45,22 @@
 }
 
 .NavItem:hover {
-    color:rgb(90, 155, 221);
+    color: rgb(90, 155, 221);
     transform: translateY(-3px) scale(1.1);
 
 }
 
-.BrandName{
-    width :auto;
+.BrandName {
+    width: auto;
     height: 56px;
 }
 
-.BrandNameImg{
+.BrandNameImg {
     height: inherit;
     width: auto;
 }
 
-.NavBarToggle{
+.NavBarToggle {
     height: 30px;
     width: 30px;
     background-image: url('../assets/icons8-guitar-80.png');
@@ -67,37 +70,44 @@
     display: none;
 }
 
-@media only screen and (max-width:768px){
-    .NavBar{
+@media only screen and (max-width:768px) {
+    .NavBar {
         height: 100%;
         position: absolute;
     }
-    .NavBarCollapseGlassMorphism{
+
+    .NavBarCollapseGlassMorphism {
         backdrop-filter: blur(16px) saturate(180%);
         -webkit-backdrop-filter: blur(16px) saturate(180%);
         background-color: rgba(37, 52, 79, 0.5);
         border: 1px solid rgba(255, 255, 255, 0.125);
         transition: all 0.1s ease-in-out;
     }
-    .NavBar .NavBarWrapper{
+
+    .NavBar .NavBarWrapper {
         justify-content: start;
         flex-direction: column;
     }
-    .NavBar .NavBarWrapper .NavBarToggle{
+
+    .NavBar .NavBarWrapper .NavBarToggle {
         display: flex;
         place-self: end;
     }
+
     .NavBarMenu {
         display: none;
         flex-direction: column;
     }
-    .NavBarToggle{
+
+    .NavBarToggle {
         display: block;
     }
-    .NavBarVisible{
+
+    .NavBarVisible {
         display: flex;
     }
 }
+
 .hoverunderlineAnimation:after {
     content: '';
     position: absolute;
@@ -106,12 +116,13 @@
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: 
-  #0087ca;
+    background-color:
+        #0087ca;
     transform-origin: bottom right;
     transition: transform 0.4s ease-in;
-  }
+}
+
 .hoverunderlineAnimation:hover:after {
     transform: scaleX(1);
     transform-origin: bottom left;
-  }
+}

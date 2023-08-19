@@ -1,20 +1,22 @@
-.Page{
-    background-image: url('../assets/WORK_BG.png');
+.Page {
+    background-image: url('src/assets/background1.png'), linear-gradient(to right, black, rgba(0, 0, 0, 0) );
+    background-blend-mode:overlay ;
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
-    max-height: calc(100vh - 100px);
+    background-attachment: fixed;
+    max-height: 100vh;
 }
 
-.Container{
+.Container {
     justify-content: center;
     overflow: hidden;
 }
 
 
-.CardWrapper{
-    border-radius: 16px;
+.CardWrapper {
+    border-radius: var(--border-radius);
     height: 400px;
     aspect-ratio: 3/4;
     background: white;
@@ -22,15 +24,22 @@
     overflow: hidden;
 }
 
-.Card{
+.Card {
     height: 100%;
     width: 100%;
-    padding:16px 20px;
+    padding: 16px 20px;
     position: relative;
 }
-.CardBackground{
+
+.CardBackground {
     position: absolute;
     background-color: rgb(224, 213, 213);
     height: 100%;
-    width:100%;
+    width: 100%;
+}
+
+@media only screen and (max-width:480px) {
+    .Page {
+        max-height: 80vh;
+    }
 }

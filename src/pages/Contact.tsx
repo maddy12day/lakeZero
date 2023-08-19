@@ -12,26 +12,21 @@ export const Contact = ({ id }: { id: string }) => {
                     <div className={`${PageStyle.Title}`}>
                         Contact Us
                     </div>
-                    <div className={`${PageStyle.Container} ${Style.Container}`}>
-                        <div className={`${PageStyle.ContainerColFlex} ${Style.ContactInfo}`}>
-                            <div>
-                                Animesh Shukla
-                            </div>
-                            <SocialMediaContainer mediaUrl={mediaData}/>
-                        </div>
+                    <div className={`${PageStyle.Container} ${Style.FormContainer}`}>
                         <Widget id="h4tmeBNy" className={`my-form ${Style.Form}`} />
+                        <div className={`${PageStyle.ContainerColFlex} ${Style.ContactInfo}`}>
+                            <div className={PageStyle.Container}>
+                                <img src='src/assets/location.png' title='Location Icon' className={Style.icon}/>
+                                <div className={Style.Address}>
+                                    <span>LakeZero Studios</span>
+                                    <span>1301, Sheetal Vishal Dharmaraj,</span>
+                                    <span>Marve Road, Mith Chowki, Opp. Girdhar Park,</span>
+                                    <span>Malad West, Mumbai 400064.</span>
+                                </div>
+                            </div>
+                            <SocialMediaContainer mediaUrl={mediaData} className={Style.SocialMedia}/>
+                        </div>
                     </div>
-                    {/* <div className={`${Style.Form}`}>
-                    <label>Drop us a message</label>
-                    <div className={`${Style.Name}`}>
-                        <input type="text" placeholder="First Name" autoComplete="false" />
-                        <input type="text" placeholder="Last Name" autoComplete="false" />
-                    </div>
-                    <input type="text" placeholder="Mobile" />
-                    <input type="email" placeholder="name@company.com" pattern='[a-zA-Z\-\.]@[a-zA-Z].com'/>
-                    <textarea name="" id="" cols="30" rows="5" placeholder="Message"></textarea>
-                    <button id="send" className="gridCenter">Send</button>
-                </div> */}
                 </div>
             </div>
         </>

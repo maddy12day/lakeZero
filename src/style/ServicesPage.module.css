@@ -1,171 +1,189 @@
-.Page{
+.Page {
     max-height: none;
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
-    background-image: url("/src/assets/new.svg");
-    background-size: contain;
+    background-image: url("/src/assets/service_page_bg.jpg"), linear-gradient(to right, black, rgba(0, 0, 0, 0) );
+    background-blend-mode:overlay ;
+    background-position: top center;
+    background-size: cover;
     background-repeat: no-repeat;
 }
 
-.Circle{
-
-    height:300px;
-    width:100%;
+.Circle {
+    height: 300px;
+    width: 100%;
     position: relative;
     background-size: cover;
     background-repeat: no-repeat;
 }
 
-.Container{
+.Container {
     flex-wrap: wrap;
 }
-.Line{
+
+.Line {
     height: 3px;
-    border:none;
+    border: none;
     background-color: black;
-    padding:1px;
-    margin:10px;
+    padding: 1px;
+    margin: 10px;
 }
 
 
-.Text{
-    font-size: 18px;
+.Text {
+    font-size: var(--font-small);
     font-weight: 600;
     color: wheat;
     opacity: 1;
     transition: 0.3s all ease;
-  }
-.CardContainer{
+}
+
+.CardContainer {
+    margin-top: 20px;
     height: 100%;
     width: 25vw;
     aspect-ratio: 4/2;
     display: flex;
     align-items: center;
     opacity: 0;
-    border-radius: 8px;
+    border-radius: var(--border-radius);
     overflow: hidden;
     transform: translateZ(0);
+    box-shadow: 10px 10px rgb(0 0 0 / 0.5);
 }
 
 @keyframes fade-up {
-    0%{
+    0% {
         transform: translateX(-150px);
         opacity: 0;
     }
-    100%{
-        transform:translateX(0px);
+
+    100% {
+        transform: translateX(0px);
         opacity: 1;
     }
 }
+
 @media (prefers-reduced-motion: no-preference) {
-  .CardAnimation {
-    animation-duration: 2.5s;
-    animation-name: fade-up;
-    animation-fill-mode: both;
-}
-.CardAnimation:nth-child(2){
-    animation-delay: 100ms;
-}
-.CardAnimation:nth-child(3){
-    animation-delay: 200ms;
-}
-.CardAnimation:nth-child(4){
-    animation-delay: 300ms;
-}
-.CardAnimation:nth-child(5){
-    animation-delay: 400ms;
-}
-.CardAnimation:nth-child(6){
-    animation-delay: 500ms;
-}
+    .CardAnimation {
+        animation-duration: 2.5s;
+        animation-name: fade-up;
+        animation-fill-mode: both;
+    }
+
+    .CardAnimation:nth-child(2) {
+        animation-delay: 100ms;
+    }
+
+    .CardAnimation:nth-child(3) {
+        animation-delay: 200ms;
+    }
+
+    .CardAnimation:nth-child(4) {
+        animation-delay: 300ms;
+    }
+
+    .CardAnimation:nth-child(5) {
+        animation-delay: 400ms;
+    }
+
+    .CardAnimation:nth-child(6) {
+        animation-delay: 500ms;
+    }
 }
 
-.CardWrapper{
-    border-radius: 16px;
-    width:100%;
+.CardWrapper {
+    border-radius: var(--border-radius);
+    width: 100%;
     height: inherit;
     background: white;
     position: relative;
 }
 
-.Card{
+.Card {
     height: inherit;
     width: inherit;
-    padding:16px 20px;
+    padding: 16px 20px;
     position: relative;
     text-align: center;
     z-index: 1;
-    justify-content: space-evenly;
     transition: all 0.2s ease;
 }
 
-.Card::after{
+.Card::after {
     content: '';
-    background:linear-gradient(to left, black, transparent);
+    background: linear-gradient(to left, black, transparent);
     height: 100%;
     width: 100%;
-    left:0px;
-    top:0px;
+    left: 0px;
+    top: 0px;
     position: absolute;
     z-index: -1;
 }
-.Card:hover{
+
+.Card:hover {
     backdrop-filter: blur(6px) saturate(180%);
     -webkit-backdrop-filter: blur(8px) saturate(180%);
     background-color: rgba(39, 39, 39, 0.75);
 }
-.Card:hover .Text{
+
+.Card:hover .Text {
     opacity: 0;
     transform: translateY(-100%);
 }
-.CardFadeUp{
+
+.CardFadeUp {
     position: relative;
     color: white;
     text-align: justify;
     transform: translateY(200px);
     transition: all 0.4s ease;
 }
-.CardFadeUp .Link{
+
+.CardFadeUp .Link {
     text-decoration: underline;
-    color:rgb(187, 187, 187);
+    color: rgb(187, 187, 187);
 }
 
-@media (prefers-reduced-motion: no-preference){
-    .Card:hover .CardFadeUp{
+@media (prefers-reduced-motion: no-preference) {
+    .Card:hover .CardFadeUp {
         transform: translateY(-20px);
     }
 }
 
-.CardBackground{
+.CardBackground {
     position: absolute;
     height: 100%;
     width: 100%;
     object-fit: cover;
 }
 
-.Card .Title{
+.Card .Title {
     color: wheat;
 }
 
 
 @media only screen and (max-width:768px) {
-    .CardContainer{
+    .CardContainer {
         width: 100%;
         aspect-ratio: 16/9;
     }
-    .Container{
-        gap:15px;
+
+    .Container {
+        gap: 15px;
         flex-direction: column;
     }
-    .CardWrapper{
-        width:100%;
+
+    .CardWrapper {
+        width: 100%;
     }
-    .CardContainer:nth-child(2) .Card{
-        text-align: left;
-    }
+
     .CardContainer:nth-child(2) .Card::after {
-        background: linear-gradient(to right, rgb(0, 0, 0) 0%,rgba(0, 0, 0) 30%,rgba(0, 0, 0, 0.404) 70%, transparent 100%);
+        background: linear-gradient(to right, rgb(0, 0, 0) 0%, rgba(0, 0, 0) 30%, rgba(0, 0, 0, 0.404) 70%, transparent 100%);
+    }
+    .CardFadeUp{
+        font-size: var(--font-small);
     }
 }

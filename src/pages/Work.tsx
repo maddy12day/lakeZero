@@ -33,7 +33,8 @@ export const WorkPage = ({id}:{id:string}) => {
     }
     return <>
         <div className={`${PageStyle.Page} ${WorkPageStyle.Page}`} id={id}>
-            <div className={`${PageStyle.Title}`}>Works</div>
+            {/* <div className={PageStyle.blurEnable}/> */}
+            <div className={`${PageStyle.Title}`}>Some peices of our Arts</div>
             <div className={`${PageStyle.Container} ${WorkPageStyle.Container}`}>
                 <RotatingCarousel reverse={true} speed={3} data={row1.map(el=>{return {imageUrl: getVideoThumbnail(el), url:el}})}/>
                 <RotatingCarousel speed={4} data={row2.map(el=>{return {imageUrl: getVideoThumbnail(el), url:el}})}/>

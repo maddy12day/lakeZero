@@ -5,20 +5,23 @@ import { useEffect, useState } from 'react'
 
 export const Navbar = () => {
   const [isNavCollapsed, setNavCollapsed] = useState(false)
+  const handleToggle = ()=>{
+    setNavCollapsed(!isNavCollapsed)
+  }
   return <>
     <div className={`${NavStyle.NavBar} ${isNavCollapsed ? NavStyle.NavBarCollapseGlassMorphism : ''}`}>
 
       <div className={`${NavStyle.NavBarWrapper}`}>
-        <div className={`${NavStyle.NavBarToggle}`} onClick={() => setNavCollapsed(!isNavCollapsed)}></div>
-
-
+        <div className={`${NavStyle.NavBarToggle}`} onClick={handleToggle}></div>
           <div className={`${NavStyle.NavBarMenu} ${isNavCollapsed ? NavStyle.NavBarVisible : ''}`}>
             {NavData.map((item,index) => (
               <div className={`${NavStyle.NavItem} ${NavStyle.hoverunderlineAnimation}`} key={index}>
                 <Link to={`#${item.navlinkName}`}
                   key={item.navlinkName}
-                  onClick={() =>
-                    document.getElementById(item.navlinkName)?.scrollIntoView({ behavior: 'smooth' })
+                  onClick={() =>{
+                    document.getElementById(item.navlinkName)?.scrollIntoView({ behavior: 'smooth' });
+                    handleToggle();
+                  }
                   }>
                   {item.navlinkName}
 
